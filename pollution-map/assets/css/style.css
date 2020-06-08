@@ -1,0 +1,26 @@
+.land {
+	fill: steelblue;
+	stroke-width: 1px;
+	stroke: #000; 
+}
+
+.district {
+	fill: none;
+	stroke: #000;
+}
+
+.green-land {
+	fill: #00ff00;
+	stroke-width: 2px;
+}
+
+.green-area {
+	fill: none;
+	stroke: #00ff00;
+}
+
+.street {
+	stroke: #444; 
+	stroke-width: 1px;
+	fill: none;
+}
