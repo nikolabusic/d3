@@ -447,7 +447,7 @@ function ticked() {
         if (this.getAttribute('transform')) {
             var tx = +this.getAttribute('transform').split(/[(),]/)[1];
             var ty = +this.getAttribute('transform').split(/[(),]/)[2];
-            this.setAttribute("transform", "translate(" + tx + "," + (ty - d.node.y + maxY + 10) + ")");
+            this.setAttribute("transform", "translate(" + tx + "," + (ty - d.node.y + maxY + 16) + ")");
         }
     });
     // repositioning top and bottom labels: start
