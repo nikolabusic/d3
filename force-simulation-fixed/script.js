@@ -216,7 +216,7 @@ var graphLayout = d3.forceSimulation(graph.nodes)
     .force("charge", d3.forceManyBody().strength(-3000))
     .force("center", d3.forceCenter(width / 2, height / 2))
     .force("x", d3.forceX(width / 2).strength(1))
-    .force("y", d3.forceY(height / 2).strength(1))
+    .force("y", d3.forceY((height - 60) / 2).strength(1))
     .force("link", d3.forceLink(graph.links).id(function (d) { return d.id; }).distance(50).strength(1))
     .force('collision', collisionForce)
     .on("tick", ticked);
@@ -317,98 +317,50 @@ var labelNode = container.append("g").attr("class", "labelNodes")
 node.on("mouseover", focus).on("mouseout", unfocus);
 
 // get nodes, images and links for top and bottom linear indices
-var minLinear = Infinity, maxLinear = 0;
+var topIndex = 0, bottIndex = 0;
 
-graph.nodes.forEach(function(d) {
+graph.nodes.forEach(function(d, i) {
     if (d['linear index'] > 0) {
-        if (d['linear index'] < minLinear) {
-            minLinear = d['linear index'];
+        if (d['linear index'] < graph.nodes[topIndex]['linear index']) {
+            topIndex = i;
         }
         
-        if (d['linear index'] > maxLinear) {
-            maxLinear = d['linear index'];
+        if (d['linear index'] > graph.nodes[bottIndex]['linear index']) {
+            bottIndex = i;
         }
     }
 });
 
-var topNode = d3.selectAll('.nodes circle')
-    .filter(function(d) {
-        return d['linear index'] > 0 && d['linear index'] == minLinear;
-    });
-
-var bottNode = d3.selectAll('.nodes circle')
-    .filter(function(d) {
-        return d['linear index'] > 0 && d['linear index'] == maxLinear;
-    });
-
-var topId = topNode.data()[0].id;
-var bottId = bottNode.data()[0].id;
-
-var topLabel = d3.selectAll('.labelNodes image')
-    .filter(function(d) {
-        return d.node.id == topId;
-    });
-
-var bottLabel = d3.selectAll('.labelNodes image')
-    .filter(function(d) {
-        return d.node.id == bottId;
-    });
-
-var topSourceLink = d3.selectAll('.links line')
-    .filter(function(d) {
-        return d.source.id == topId;
-    });
-
-var topTargetLink = d3.selectAll('.links line')
-    .filter(function(d) {
-        return d.target.id == topId;
-    });
-
-var bottSourceLink = d3.selectAll('.links line')
-    .filter(function(d) {
-        return d.source.id == bottId;
-    });
-
-var bottTargetLink = d3.selectAll('.links line')
-    .filter(function(d) {
-        return d.target.id == bottId;
-    });
-
-var minY = Infinity, maxY = -Infinity;
+var isDragging = false;
 
 function ticked() {
-    minY = Infinity;
-    maxY = -Infinity;
+    if (!isDragging) {
+        var minY = Infinity, maxY = -Infinity;
+
+        graph.nodes.forEach(function(d, i) {
+            if (i !== topIndex && d.y < minY) {
+                minY = d.y;
+            }
+        
+            if (i !== bottIndex && d.y > maxY) {
+                maxY = d.y;
+            }
+        });
+        
+        minY -= 30;
+        maxY += 30;
+    
+        if(graph.nodes[topIndex].y !== minY) {
+            graph.nodes[topIndex].y = minY;
+        }
+    
+        if(graph.nodes[bottIndex].y !== maxY) {
+            graph.nodes[bottIndex].y = maxY;
+        }    
+    }
 
     node.call(updateNode);
     link.call(updateLink);
-
-    // repositioning top and bottom nodes and links: start
-    topNode.fixed = true;
-    topNode.attr('transform', function(d) {
-        return 'translate(' + fixna(d.x) + ',' + (minY - 30) + ')'
-    });
-    bottNode.fixed = true;
-    bottNode.attr('transform', function(d) {
-        return 'translate(' + fixna(d.x) + ',' + (maxY + 30) + ')'
-    });
-
-    topSourceLink.attr("y1", function (d) { 
-        return (minY - 30); 
-    });
-
-    topTargetLink.attr("y2", function (d) { 
-        return (minY - 30); 
-    });
-
-    bottSourceLink.attr("y1", function (d) { 
-        return (maxY + 30); 
-    });
-
-    bottTargetLink.attr("y2", function (d) { 
-        return (maxY + 30); 
-    });
-    // repositioning top and bottom nodes and links: end
 
     labelLayout.alphaTarget(0.3).restart();
     labelNode.each(function (d, i) {
@@ -430,27 +382,6 @@ function ticked() {
         }
     });
     labelNode.call(updateNode);
-
-    // repositioning top and bottom labels: start
-    topLabel.each(function(d) {
-        d.fixed = true;
-
-        if (this.getAttribute('transform')) {
-            var tx = +this.getAttribute('transform').split(/[(),]/)[1];
-            var ty = +this.getAttribute('transform').split(/[(),]/)[2];
-            this.setAttribute("transform", "translate(" + tx + "," + (ty - d.node.y + minY - 10) + ")");
-        }
-    });
-    bottLabel.each(function(d) {
-        d.fixed = true;
-
-        if (this.getAttribute('transform')) {
-            var tx = +this.getAttribute('transform').split(/[(),]/)[1];
-            var ty = +this.getAttribute('transform').split(/[(),]/)[2];
-            this.setAttribute("transform", "translate(" + tx + "," + (ty - d.node.y + maxY + 16) + ")");
-        }
-    });
-    // repositioning top and bottom labels: start
 }
 
 function fixna(x) {
@@ -486,14 +417,6 @@ function updateLink(link) {
 
 function updateNode(node) {
     node.attr("transform", function (d) {
-        if (fixna(d.y) < minY) {
-            minY = fixna(d.y);
-        }
-
-        if (fixna(d.y) > maxY) {
-            maxY = fixna(d.y);
-        }
-
         return "translate(" + fixna(d.x) + "," + fixna(d.y) + ")";
     });
 }
@@ -503,6 +426,7 @@ function dragstarted(d) {
     if (!d3.event.active) graphLayout.alphaTarget(0.1).restart();
     d.fx = d.x;
     d.fy = d.y;
+    isDragging = true;
 }
 
 function dragged(d) {
@@ -514,4 +438,5 @@ function dragended(d) {
     if (!d3.event.active) graphLayout.alphaTarget(0);
     d.fx = null;
     d.fy = null;
+    isDragging = false;
 }
