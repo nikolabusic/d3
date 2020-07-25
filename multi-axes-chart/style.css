@@ -1,0 +1,37 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+.x-axis text {
+  font-size: 12px;
+}
+
+.x-axis line,
+.y-axes .line {
+  opacity: 0.2;
+  stroke-dasharray: 5 5;
+}
+
+text {
+  font: 10px sans-serif;
+}
+
+#container {
+  float: left;
+}
+
+#legend {
+  float: left;
+}
+
+.chart path {
+  fill: none;
+  opacity: 0.7;
+  stroke-width: 2px;
+}
+
+.y-axes text {
+  letter-spacing: 0.5px;
+  font-size: 12px;
+}
