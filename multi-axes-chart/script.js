@@ -6,8 +6,6 @@ const height = Math.min(
   document.body.getBoundingClientRect().height - margin.top - margin.bottom,
 );
 
-const numberOfPoints = 100;
-const pointRadius = 3;
 const numberOfSeries = 5;
 const numberOfTicks = 5;
 

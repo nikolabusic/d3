@@ -1,0 +1,8 @@
+[05-Jan-2015 11:26:46 America/Denver] PHP Warning:  fopen(data/custom.json): failed to open stream: Permission denied in /home/prodesko/public_html/map/process.php on line 27
+[05-Jan-2015 11:26:49 America/Denver] PHP Warning:  fopen(data/custom.json): failed to open stream: Permission denied in /home/prodesko/public_html/map/process.php on line 27
+[05-Jan-2015 11:28:28 America/Denver] PHP Warning:  fopen(data/custom.json): failed to open stream: Permission denied in /home/prodesko/public_html/map/process.php on line 27
+[05-Jan-2015 11:37:03 America/Denver] PHP Warning:  fopen(data/custom.json): failed to open stream: Permission denied in /home/prodesko/public_html/map/process.php on line 27
+[05-Jan-2015 11:40:30 America/Denver] PHP Warning:  fopen(data/custom.json): failed to open stream: Permission denied in /home/prodesko/public_html/map/process.php on line 27
+[05-Jan-2015 11:41:40 America/Denver] PHP Warning:  fopen(data/custom.json): failed to open stream: Permission denied in /home/prodesko/public_html/map/process.php on line 27
+[05-Jan-2015 11:41:43 America/Denver] PHP Warning:  fopen(data/custom.json): failed to open stream: Permission denied in /home/prodesko/public_html/map/process.php on line 27
+[05-Jan-2015 11:43:41 America/Denver] PHP Warning:  fopen(data/custom.json): failed to open stream: Permission denied in /home/prodesko/public_html/map/process.php on line 27
