@@ -1,0 +1,325 @@
+{
+  "tasks": [
+    {
+      "start": 1596699957000,
+      "end": 1596708957000,
+      "title": "OT: 370-302",
+      "status": 1,
+      "machine": 8,
+      "delay": 22
+    },
+    {
+      "start": 1596778891000,
+      "end": 1596795960390,
+      "title": "OT: 192-518",
+      "status": 2,
+      "machine": 3
+    },
+    {
+      "start": 1596703666000,
+      "end": 1596712666000,
+      "title": "OT: 225-228",
+      "status": 3,
+      "machine": 12,
+      "progress": 12,
+      "delay": 13
+    },
+    {
+      "start": 1596784804000,
+      "end": 1596820306652,
+      "title": "OT: 713-438",
+      "status": 4,
+      "machine": 5,
+      "delay": 28
+    },
+    {
+      "start": 1596792889000,
+      "end": 1596809445348,
+      "title": "OT: 506-192",
+      "status": 3,
+      "machine": 4,
+      "progress": 84,
+      "delay": 22
+    },
+    {
+      "start": 1596752444000,
+      "end": 1596786021911,
+      "title": "OT: 182-631",
+      "status": 4,
+      "machine": 12,
+      "delay": 51
+    },
+    {
+      "start": 1596812335668,
+      "end": 1596821335668,
+      "title": "OT: 720-741",
+      "status": 4,
+      "machine": 4,
+      "delay": 58
+    },
+    {
+      "start": 1596715386599,
+      "end": 1596739282160,
+      "title": "OT: 935-953",
+      "status": 1,
+      "machine": 8,
+      "delay": 17
+    },
+    {
+      "start": 1596832592000,
+      "end": 1596852109777,
+      "title": "OT: 958-992",
+      "status": 3,
+      "machine": 1,
+      "progress": 58,
+      "delay": 23
+    },
+    {
+      "start": 1596711677000,
+      "end": 1596735548456,
+      "title": "OT: 373-594",
+      "status": 1,
+      "machine": 10,
+      "delay": 30
+    },
+    {
+      "start": 1596783171000,
+      "end": 1596792171000,
+      "title": "OT: 199-129",
+      "status": 4,
+      "machine": 10,
+      "delay": 35
+    },
+    {
+      "start": 1596857933133,
+      "end": 1596879602598,
+      "title": "OT: 494-123",
+      "status": 2,
+      "machine": 1
+    },
+    {
+      "start": 1596847903000,
+      "end": 1596880635802,
+      "title": "OT: 351-407",
+      "status": 4,
+      "machine": 3,
+      "delay": 33
+    },
+    {
+      "start": 1596823073860,
+      "end": 1596832073860,
+      "title": "OT: 739-420",
+      "status": 3,
+      "machine": 5,
+      "progress": 87,
+      "delay": 13
+    },
+    {
+      "start": 1596834055808,
+      "end": 1596848705484,
+      "title": "OT: 978-903",
+      "status": 2,
+      "machine": 5
+    },
+    {
+      "start": 1596797653000,
+      "end": 1596828542546,
+      "title": "OT: 415-930",
+      "status": 4,
+      "machine": 8,
+      "delay": 35
+    },
+    {
+      "start": 1596763209000,
+      "end": 1596787151054,
+      "title": "OT: 292-182",
+      "status": 4,
+      "machine": 11,
+      "delay": 12
+    },
+    {
+      "start": 1596832309704,
+      "end": 1596841309704,
+      "title": "OT: 873-801",
+      "status": 3,
+      "machine": 8,
+      "progress": 86,
+      "delay": 26
+    },
+    {
+      "start": 1596886041353,
+      "end": 1596908147138,
+      "title": "OT: 808-696",
+      "status": 2,
+      "machine": 1
+    },
+    {
+      "start": 1596733243000,
+      "end": 1596750845157,
+      "title": "OT: 992-753",
+      "status": 3,
+      "machine": 14,
+      "progress": 32,
+      "delay": 12
+    },
+    {
+      "start": 1596792596225,
+      "end": 1596808270431,
+      "title": "OT: 991-310",
+      "status": 2,
+      "machine": 11
+    },
+    {
+      "start": 1596739788000,
+      "end": 1596748788000,
+      "title": "OT: 487-929",
+      "status": 1,
+      "machine": 7,
+      "delay": 37
+    },
+    {
+      "start": 1596852915000,
+      "end": 1596886011607,
+      "title": "OT: 968-919",
+      "status": 1,
+      "machine": 10,
+      "delay": 32
+    },
+    {
+      "start": 1596827293863,
+      "end": 1596863138431,
+      "title": "OT: 769-802",
+      "status": 4,
+      "machine": 4,
+      "delay": 15
+    },
+    {
+      "start": 1596882001176,
+      "end": 1596914990892,
+      "title": "OT: 148-969",
+      "status": 4,
+      "machine": 3,
+      "delay": 46
+    },
+    {
+      "start": 1596916967202,
+      "end": 1596927539890,
+      "title": "OT: 148-318",
+      "status": 1,
+      "machine": 3,
+      "delay": 40
+    }
+  ],
+  "statuses": [
+    {
+      "id": 1,
+      "name": "Scheduled"
+    },
+    {
+      "id": 2,
+      "name": "Finished"
+    },
+    {
+      "id": 3,
+      "name": "Production"
+    },
+    {
+      "id": 4,
+      "name": "Not scheduled"
+    }
+  ],
+  "machines": [
+    {
+      "id": 1,
+      "name": "Machine 1"
+    },
+    {
+      "id": 2,
+      "name": "Machine 2"
+    },
+    {
+      "id": 3,
+      "name": "Machine 3"
+    },
+    {
+      "id": 4,
+      "name": "Machine 4"
+    },
+    {
+      "id": 5,
+      "name": "Machine 5"
+    },
+    {
+      "id": 6,
+      "name": "Machine 6"
+    },
+    {
+      "id": 7,
+      "name": "Machine 7"
+    },
+    {
+      "id": 8,
+      "name": "Machine 8"
+    },
+    {
+      "id": 9,
+      "name": "Machine 9"
+    },
+    {
+      "id": 10,
+      "name": "Machine 10"
+    },
+    {
+      "id": 11,
+      "name": "Machine 11"
+    },
+    {
+      "id": 12,
+      "name": "Machine 12"
+    },
+    {
+      "id": 13,
+      "name": "Machine 13"
+    },
+    {
+      "id": 14,
+      "name": "Machine 14"
+    },
+    {
+      "id": 15,
+      "name": "Machine 15"
+    },
+    {
+      "id": 16,
+      "name": "Machine 16"
+    },
+    {
+      "id": 17,
+      "name": "Machine 17"
+    },
+    {
+      "id": 18,
+      "name": "Machine 18"
+    },
+    {
+      "id": 19,
+      "name": "Machine 19"
+    },
+    {
+      "id": 20,
+      "name": "Machine 20"
+    },
+    {
+      "id": 21,
+      "name": "Machine 21"
+    },
+    {
+      "id": 22,
+      "name": "Machine 22"
+    },
+    {
+      "id": 23,
+      "name": "Machine 23"
+    }
+  ]
+}
