@@ -94,8 +94,9 @@ d3.json('./assets/data.json').then(data => {
       } else {
         gTasks
           .selectAll('.task')
-          .filter(d => selIds.indexOf(d.status.toString()) == '-1')
-          .style('display', 'none');
+          .style('display', d =>
+            selIds.indexOf(d.status.toString()) == '-1' ? 'none' : null,
+          );
       }
     });
 
