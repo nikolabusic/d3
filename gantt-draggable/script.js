@@ -211,10 +211,11 @@ d3.json('./assets/data.json').then(data => {
     .attr('clip-path', 'url(#clip)')
     .attr('class', 'tasks');
 
-  let dragStart, beforeState;
+  let dragStart, beforeState, beforeEvent;
   const dragTask = d3
     .drag()
     .on('start', function (d) {
+      beforeEvent = { x: d3.event.x, y: d3.event.y };
       dragStart = x.invert(d3.event.x).getTime();
 
       if (statuses[d.status] == NOT_SCHEDULED) {
@@ -229,8 +230,9 @@ d3.json('./assets/data.json').then(data => {
 
         d.start = x.invert(parseFloat(trans[0])).getTime();
         d.end = d.start + distance;
-        beforeState = NOT_SCHEDULED;
       }
+
+      beforeState = statuses[d.status];
     })
     .on('drag', function (d) {
       const dragX = x.invert(d3.event.x).getTime(),
@@ -315,6 +317,8 @@ d3.json('./assets/data.json').then(data => {
           d3.select(this).append(() =>
             d3.select(this).select('path.overlay').node(),
           );
+
+          d3.select(this).select('.overlay').on('click', showModal);
         }
       } else if (statuses[d.status] !== NOT_SCHEDULED) {
         for (let id in statuses) {
@@ -361,6 +365,11 @@ d3.json('./assets/data.json').then(data => {
       }
     })
     .on('end', function (d) {
+      if (beforeEvent.x == d3.event.x && beforeEvent.y == d3.event.y) {
+        showModal(d);
+        return;
+      }
+
       if (statuses[d.status] == SCHEDULED && beforeState == NOT_SCHEDULED) {
         gTasks.append(() => d3.select(this).node());
       } else if (statuses[d.status] == NOT_SCHEDULED) {
@@ -422,11 +431,16 @@ d3.json('./assets/data.json').then(data => {
     .append('div')
     .classed('modal-content', true);
 
-  // window.onclick = event => {
-  //   if (event.target == modal.node()) {
-  //     modal.style('display', 'none');
-  //   }
-  // };
+  const showModal = d => {
+    modal.style('display', 'block');
+    modalContent.html(
+      d.title +
+        '<br/>Status: ' +
+        statuses[d.status] +
+        '<br/>Date: ' +
+        getFormattedDate(d.start),
+    );
+  };
 
   const addTask = (d, that) => {
     const startDate = new Date(d.start);
@@ -520,16 +534,7 @@ d3.json('./assets/data.json').then(data => {
         .attr('class', 'overlay')
         .on('mouseover', tip.show)
         .on('mouseout', tip.hide)
-        .on('click', () => {
-          modal.style('display', 'block');
-          modalContent.html(
-            d.title +
-              '<br/>Status: ' +
-              statuses[d.status] +
-              '<br/>Date: ' +
-              getFormattedDate(d.start),
-          );
-        })
+        .on('click', showModal)
         .node();
     });
   };
