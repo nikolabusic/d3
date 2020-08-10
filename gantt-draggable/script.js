@@ -9,13 +9,13 @@ const notSchTaskWid = 120;
 const NOT_SCHEDULED = 'Not scheduled';
 const SCHEDULED = 'Scheduled';
 const margin = {
-  top: 100,
+  top: 40,
   right: 60,
-  bottom: 150,
+  bottom: 60,
   left: mLabelWidth + 20,
 };
 let width = document.body.clientWidth - 17 - margin.right - margin.left;
-let height = document.body.clientHeight - margin.top - margin.bottom;
+let height = 640 - margin.top - margin.bottom;
 let x, y, xAxis, xAxis1, yAxis, gX, gX1, gY;
 
 const formatMillisecond = d3.timeFormat('.%L'),
@@ -60,6 +60,50 @@ d3.json('./assets/data.json').then(data => {
   const statuses = {};
   data.statuses.forEach(s => (statuses[s.id] = s.name));
 
+  const colors = {
+    Scheduled: '#cc0000',
+    Production: '#669900',
+    Finished: '#ffbb33',
+  };
+
+  const filters = d3
+    .select('body')
+    .append('div')
+    .classed('filters', true)
+    .selectAll('.filter')
+    .data(data.statuses.filter(d => d.name !== NOT_SCHEDULED))
+    .enter()
+    .append('label')
+    .classed('filter', true);
+
+  filters
+    .append('input')
+    .attr('type', 'checkbox')
+    .attr('id', d => d.id)
+    .attr('value', d => d.name)
+    .on('click', d => {
+      const selIds = [];
+      const checked = document.querySelectorAll('.filters input:checked');
+
+      checked.forEach(c => {
+        selIds.push(c.getAttribute('id'));
+      });
+
+      if (!selIds.length) {
+        gTasks.selectAll('.task').style('display', null);
+      } else {
+        gTasks
+          .selectAll('.task')
+          .filter(d => selIds.indexOf(d.status.toString()) == '-1')
+          .style('display', 'none');
+      }
+    });
+
+  filters
+    .append('span')
+    .style('background-color', d => colors[d.name])
+    .text(d => d.name);
+
   const tickHeight = height / yTicksCnt;
 
   const svg = d3
@@ -67,7 +111,7 @@ d3.json('./assets/data.json').then(data => {
     .append('svg')
     .attr('class', 'ganttChart')
     .attr('width', width + margin.left + margin.right)
-    .attr('height', height + margin.top + margin.bottom);
+    .attr('height', height + margin.top);
 
   svg
     .append('defs')
@@ -324,7 +368,7 @@ d3.json('./assets/data.json').then(data => {
       }
 
       let xPos = 10,
-        yPos = height + margin.top;
+        yPos = height + 100;
 
       gTasksNot.selectAll('g.task').attr('transform', d => {
         const tranlate = 'translate(' + [xPos, yPos] + ')';
@@ -340,7 +384,9 @@ d3.json('./assets/data.json').then(data => {
             .select('path')
             .attr(
               'd',
-              `M0.5,${height + 90}H${width}V${yPos + 90}H0.5V${height + 90}`,
+              `M0.5,${height + 90}H${width}V${yPos + tickHeight}H0.5V${
+                height + 90
+              }`,
             );
         }
 
@@ -518,7 +564,7 @@ d3.json('./assets/data.json').then(data => {
     );
 
   let xPos = 10,
-    yPos = height + margin.top;
+    yPos = height + 100;
 
   gTasksNot
     .selectAll('.task')
@@ -531,16 +577,19 @@ d3.json('./assets/data.json').then(data => {
       const tranlate = 'translate(' + [xPos, yPos] + ')';
       xPos += notSchTaskWid + 10;
 
+      svg.attr('height', yPos + tickHeight + 120);
+
       if (xPos + notSchTaskWid > width - 20) {
         xPos = 10;
         yPos += tickHeight;
 
-        svg.attr('height', yPos + tickHeight + 120);
         gTasksNot
           .select('path')
           .attr(
             'd',
-            `M0.5,${height + 90}H${width}V${yPos + 90}H0.5V${height + 90}`,
+            `M0.5,${height + 90}H${width}V${yPos + tickHeight}H0.5V${
+              height + 90
+            }`,
           );
       }
 
