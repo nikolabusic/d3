@@ -1,192 +1,195 @@
 html, body, #wrapper {
-	width: 100%;
-	height: 100%;
-	margin: 0px;
-	font-family: Arial, Helvetica, sans-serif;
-	overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-group {
+  padding: 10px;
+  text-align: center;
+}
+
+.btn-group button {
 }
 
 .filters {
-	text-align: center;
-	margin-top: 30px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .filter {
-	margin: 5px;
-	cursor: pointer;
+  margin: 5px;
+  cursor: pointer;
 }
 
 .filter input {
-	margin: 0 5px 0 0;
+  margin: 0 5px 0 0;
 }
 
 .ganttChart {
-	font-size: 12px;
+  font-size: 12px;
 }
 
 .axis path, .axis line {
-	fill: none;
-	stroke: #000;
-	shape-rendering: crispEdges;
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
 }
 
 .axis.x line {
-	opacity: 0.2;
-	stroke-dasharray: 5 5;
+  opacity: 0.2;
+  stroke-dasharray: 5 5;
 }
 
 .axis.y text {
-	text-anchor: middle;
-	font-size: 12px;
+  text-anchor: middle;
+  font-size: 12px;
 }
 
 .bar-scheduled {
-	fill: #cc0000;
+  fill: #cc0000;
 }
 
 .bar-not-scheduled {
-	fill: #ffffff;
-	stroke: #000;
-	shape-rendering: crispEdges;
-	cursor: pointer;
+  fill: #ffffff;
+  stroke: #000;
+  shape-rendering: crispEdges;
+  cursor: pointer;
 }
 
 .bar-not-scheduled ~ .progress, .bar-not-scheduled ~ .progress-bg, .bar-scheduled ~ .progress, .bar-scheduled ~ .progress-bg {
-	display: none;
+  display: none;
 }
 
 .bar-production {
-	fill: #669900;
+  fill: #669900;
 }
 
 .bar-finished {
-	fill: #ffbb33;
+  fill: #ffbb33;
 }
 
 .task {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .task text.small, .task .progress-bg.small, .task .progress.small {
-	display: none;
+  display: none;
 }
 
 .task .percent {
-	font-size: 12px;
-	fill: #fff;
+  font-size: 12px;
+  fill: #fff;
 }
 
 .task path {
-	opacity: 0.75;
+  opacity: 0.75;
 }
 
 .task .overlay {
-	opacity: 0;
+  opacity: 0;
 }
 
 .task .delay {
-	fill: #117777;
+  fill: #117777;
 }
 
 .task text {
-	text-anchor: middle;
+  text-anchor: middle;
 }
 
 .task .progress-bg {
-	opacity: 1;
-	fill: #fff;
+  opacity: 1;
+  fill: #fff;
 }
 
 .task .progress {
-	opacity: 1;
-	fill: #0044ff;
+  opacity: 1;
+  fill: #0044ff;
 }
 
 .tasksNot > path {
-	fill: none;
-	stroke: #000;
-	shape-rendering: crispEdges;
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
 }
 
 .tooltip {
-	line-height: 1;
-	padding: 6px;
-	background: rgba(0, 0, 0, 0.8);
-	color: #fff;
-	border-radius: 4px;
-	font-size: 12px;
+  line-height: 1;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
 }
 
 .tooltip:after {
-	box-sizing: border-box;
-	font-size: 10px;
-	width: 100%;
-	line-height: 1;
-	color: rgba(0, 0, 0, 0.8);
-	content: '\25BC';
-	position: absolute;
-	text-align: center;
+  box-sizing: border-box;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: '\25BC';
+  position: absolute;
+  text-align: center;
 }
 
 .tooltip.n:after {
-	margin: -2px 0 0 0;
-	top: 100%;
-	left: 0;
+  margin: -2px 0 0 0;
+  top: 100%;
+  left: 0;
 }
 
 .modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgb(0, 0, 0);
-	background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-wrapper {
-	background-color: #fefefe;
-	margin: 15% auto;
-	padding: 20px;
-	border: 1px solid #888;
-	width: 80%;
-	max-width: 500px;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
 }
 
 .modal-wrapper .close {
-	color: #aaa;
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .modal-wrapper .close:hover, .modal-wrapper .close:focus {
-	color: black;
-	text-decoration: none;
-	cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .modal-content {
-	line-height: 1.3;
+  line-height: 1.3;
 }
 
-.brush {
+.scroll .overlay {
+  fill: #fff;
+  stroke: #000;
+  shape-rendering: crispedges;
+  cursor: default;
 }
 
-.brush .overlay {
-	fill: #fff;
-	stroke: #000;
-	shape-rendering: crispedges;
-}
-
-.brush .selection {
-	stroke: #000;
-	fill: #000;
-}
-
-.brush .handle {
-	display: none;
+.scroll .selection {
+  stroke: #000;
+  fill: #000;
+  fill-opacity: 0.3;
+  shape-rendering: crispedges;
 }

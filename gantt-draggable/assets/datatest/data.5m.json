@@ -1,0 +1,2566 @@
+{
+    "machines": [
+        {
+            "id": 1, 
+            "name": "Wlkbv Etxerleuu"
+        }, 
+        {
+            "id": 2, 
+            "name": "Qlkpqqlhtrwar Qlwygybt Jbzeweeirw Sghjuxgf"
+        }, 
+        {
+            "id": 3, 
+            "name": "Iiwgiy Nvsbasev"
+        }, 
+        {
+            "id": 4, 
+            "name": "Zrbfxdqxlp"
+        }, 
+        {
+            "id": 5, 
+            "name": "Qtwhwvvpq Mdfwbfihd"
+        }
+    ], 
+    "statuses": [
+        {
+            "id": 1, 
+            "name": "Scheduled"
+        }, 
+        {
+            "id": 2, 
+            "name": "Finished"
+        }, 
+        {
+            "id": 3, 
+            "name": "Production"
+        }, 
+        {
+            "id": 4, 
+            "name": "Not scheduled"
+        }
+    ], 
+    "tasks": [
+        {
+            "end": 1596308400000, 
+            "machine": 1, 
+            "start": 1596283200000, 
+            "status": 2, 
+            "title": "OT: 370-5702"
+        }, 
+        {
+            "delay": 21, 
+            "end": 1596322800000, 
+            "machine": 1, 
+            "progress": 53, 
+            "start": 1596315600000, 
+            "status": 3, 
+            "title": "OT: 619-9076"
+        }, 
+        {
+            "delay": 8, 
+            "end": 1596387600000, 
+            "machine": 1, 
+            "progress": 5, 
+            "start": 1596351600000, 
+            "status": 3, 
+            "title": "OT: 27-1914"
+        }, 
+        {
+            "end": 1596412800000, 
+            "machine": 1, 
+            "start": 1596398400000, 
+            "status": 2, 
+            "title": "OT: 149-9298"
+        }, 
+        {
+            "end": 1596423600000, 
+            "machine": 1, 
+            "start": 1596420000000, 
+            "status": 4, 
+            "title": "OT: 519-6321"
+        }, 
+        {
+            "end": 1596470400000, 
+            "machine": 1, 
+            "start": 1596438000000, 
+            "status": 4, 
+            "title": "OT: 529-3452"
+        }, 
+        {
+            "end": 1596513600000, 
+            "machine": 1, 
+            "start": 1596484800000, 
+            "status": 2, 
+            "title": "OT: 868-1347"
+        }, 
+        {
+            "end": 1596560400000, 
+            "machine": 1, 
+            "start": 1596520800000, 
+            "status": 4, 
+            "title": "OT: 441-7280"
+        }, 
+        {
+            "end": 1596582000000, 
+            "machine": 1, 
+            "start": 1596578400000, 
+            "status": 2, 
+            "title": "OT: 618-3899"
+        }, 
+        {
+            "end": 1596639600000, 
+            "machine": 1, 
+            "start": 1596603600000, 
+            "status": 1, 
+            "title": "OT: 130-5747"
+        }, 
+        {
+            "end": 1596675600000, 
+            "machine": 1, 
+            "start": 1596664800000, 
+            "status": 4, 
+            "title": "OT: 151-6641"
+        }, 
+        {
+            "delay": 25, 
+            "end": 1596722400000, 
+            "machine": 1, 
+            "progress": 99, 
+            "start": 1596697200000, 
+            "status": 3, 
+            "title": "OT: 165-8901"
+        }, 
+        {
+            "end": 1596776400000, 
+            "machine": 1, 
+            "start": 1596747600000, 
+            "status": 4, 
+            "title": "OT: 63-7213"
+        }, 
+        {
+            "delay": 28, 
+            "end": 1596819600000, 
+            "machine": 1, 
+            "progress": 1, 
+            "start": 1596794400000, 
+            "status": 3, 
+            "title": "OT: 290-2653"
+        }, 
+        {
+            "end": 1596870000000, 
+            "machine": 1, 
+            "start": 1596848400000, 
+            "status": 1, 
+            "title": "OT: 667-2159"
+        }, 
+        {
+            "end": 1596909600000, 
+            "machine": 1, 
+            "start": 1596895200000, 
+            "status": 2, 
+            "title": "OT: 914-6571"
+        }, 
+        {
+            "end": 1596970800000, 
+            "machine": 1, 
+            "start": 1596938400000, 
+            "status": 4, 
+            "title": "OT: 358-7759"
+        }, 
+        {
+            "end": 1596988800000, 
+            "machine": 1, 
+            "start": 1596981600000, 
+            "status": 1, 
+            "title": "OT: 761-991"
+        }, 
+        {
+            "delay": 13, 
+            "end": 1597042800000, 
+            "machine": 1, 
+            "progress": 91, 
+            "start": 1597006800000, 
+            "status": 3, 
+            "title": "OT: 517-4769"
+        }, 
+        {
+            "end": 1597050000000, 
+            "machine": 1, 
+            "start": 1597046400000, 
+            "status": 1, 
+            "title": "OT: 959-8027"
+        }, 
+        {
+            "delay": 25, 
+            "end": 1597068000000, 
+            "machine": 1, 
+            "progress": 27, 
+            "start": 1597053600000, 
+            "status": 3, 
+            "title": "OT: 686-978"
+        }, 
+        {
+            "end": 1597114800000, 
+            "machine": 1, 
+            "start": 1597082400000, 
+            "status": 1, 
+            "title": "OT: 616-1650"
+        }, 
+        {
+            "end": 1597158000000, 
+            "machine": 1, 
+            "start": 1597118400000, 
+            "status": 2, 
+            "title": "OT: 310-9992"
+        }, 
+        {
+            "end": 1597179600000, 
+            "machine": 1, 
+            "start": 1597161600000, 
+            "status": 4, 
+            "title": "OT: 901-5137"
+        }, 
+        {
+            "end": 1597237200000, 
+            "machine": 1, 
+            "start": 1597208400000, 
+            "status": 2, 
+            "title": "OT: 950-4594"
+        }, 
+        {
+            "end": 1597273200000, 
+            "machine": 1, 
+            "start": 1597255200000, 
+            "status": 1, 
+            "title": "OT: 151-6966"
+        }, 
+        {
+            "delay": 12, 
+            "end": 1597327200000, 
+            "machine": 1, 
+            "progress": 68, 
+            "start": 1597298400000, 
+            "status": 3, 
+            "title": "OT: 189-7749"
+        }, 
+        {
+            "end": 1597363200000, 
+            "machine": 1, 
+            "start": 1597356000000, 
+            "status": 4, 
+            "title": "OT: 915-1857"
+        }, 
+        {
+            "end": 1597428000000, 
+            "machine": 1, 
+            "start": 1597392000000, 
+            "status": 1, 
+            "title": "OT: 874-1614"
+        }, 
+        {
+            "delay": 13, 
+            "end": 1597489200000, 
+            "machine": 1, 
+            "progress": 54, 
+            "start": 1597449600000, 
+            "status": 3, 
+            "title": "OT: 423-3100"
+        }, 
+        {
+            "end": 1597550400000, 
+            "machine": 1, 
+            "start": 1597510800000, 
+            "status": 1, 
+            "title": "OT: 42-6557"
+        }, 
+        {
+            "end": 1597597200000, 
+            "machine": 1, 
+            "start": 1597568400000, 
+            "status": 2, 
+            "title": "OT: 259-4866"
+        }, 
+        {
+            "end": 1597644000000, 
+            "machine": 1, 
+            "start": 1597622400000, 
+            "status": 1, 
+            "title": "OT: 207-4644"
+        }, 
+        {
+            "end": 1597676400000, 
+            "machine": 1, 
+            "start": 1597658400000, 
+            "status": 4, 
+            "title": "OT: 389-4199"
+        }, 
+        {
+            "end": 1597701600000, 
+            "machine": 1, 
+            "start": 1597694400000, 
+            "status": 1, 
+            "title": "OT: 958-3464"
+        }, 
+        {
+            "delay": 10, 
+            "end": 1597748400000, 
+            "machine": 1, 
+            "progress": 79, 
+            "start": 1597716000000, 
+            "status": 3, 
+            "title": "OT: 954-8894"
+        }, 
+        {
+            "end": 1597784400000, 
+            "machine": 1, 
+            "start": 1597752000000, 
+            "status": 2, 
+            "title": "OT: 115-8854"
+        }, 
+        {
+            "end": 1597831200000, 
+            "machine": 1, 
+            "start": 1597791600000, 
+            "status": 1, 
+            "title": "OT: 399-9803"
+        }, 
+        {
+            "end": 1597885200000, 
+            "machine": 1, 
+            "start": 1597842000000, 
+            "status": 2, 
+            "title": "OT: 430-1381"
+        }, 
+        {
+            "end": 1597924800000, 
+            "machine": 1, 
+            "start": 1597896000000, 
+            "status": 2, 
+            "title": "OT: 617-8388"
+        }, 
+        {
+            "delay": 5, 
+            "end": 1597971600000, 
+            "machine": 1, 
+            "progress": 39, 
+            "start": 1597946400000, 
+            "status": 3, 
+            "title": "OT: 130-4933"
+        }, 
+        {
+            "end": 1597996800000, 
+            "machine": 1, 
+            "start": 1597989600000, 
+            "status": 2, 
+            "title": "OT: 255-3406"
+        }, 
+        {
+            "end": 1598029200000, 
+            "machine": 1, 
+            "start": 1598025600000, 
+            "status": 1, 
+            "title": "OT: 345-7275"
+        }, 
+        {
+            "end": 1598083200000, 
+            "machine": 1, 
+            "start": 1598054400000, 
+            "status": 4, 
+            "title": "OT: 959-7938"
+        }, 
+        {
+            "end": 1598130000000, 
+            "machine": 1, 
+            "start": 1598101200000, 
+            "status": 2, 
+            "title": "OT: 102-312"
+        }, 
+        {
+            "end": 1598173200000, 
+            "machine": 1, 
+            "start": 1598137200000, 
+            "status": 1, 
+            "title": "OT: 506-8102"
+        }, 
+        {
+            "end": 1598212800000, 
+            "machine": 1, 
+            "start": 1598194800000, 
+            "status": 2, 
+            "title": "OT: 62-5607"
+        }, 
+        {
+            "end": 1598252400000, 
+            "machine": 1, 
+            "start": 1598216400000, 
+            "status": 1, 
+            "title": "OT: 647-1206"
+        }, 
+        {
+            "delay": 8, 
+            "end": 1598313600000, 
+            "machine": 1, 
+            "progress": 1, 
+            "start": 1598274000000, 
+            "status": 3, 
+            "title": "OT: 658-3195"
+        }, 
+        {
+            "end": 1598353200000, 
+            "machine": 1, 
+            "start": 1598317200000, 
+            "status": 2, 
+            "title": "OT: 647-5799"
+        }, 
+        {
+            "end": 1598385600000, 
+            "machine": 1, 
+            "start": 1598374800000, 
+            "status": 1, 
+            "title": "OT: 237-2384"
+        }, 
+        {
+            "end": 1598421600000, 
+            "machine": 1, 
+            "start": 1598400000000, 
+            "status": 2, 
+            "title": "OT: 100-152"
+        }, 
+        {
+            "end": 1598475600000, 
+            "machine": 1, 
+            "start": 1598446800000, 
+            "status": 4, 
+            "title": "OT: 730-5548"
+        }, 
+        {
+            "end": 1598536800000, 
+            "machine": 1, 
+            "start": 1598504400000, 
+            "status": 2, 
+            "title": "OT: 32-9585"
+        }, 
+        {
+            "end": 1598590800000, 
+            "machine": 1, 
+            "start": 1598551200000, 
+            "status": 1, 
+            "title": "OT: 64-7666"
+        }, 
+        {
+            "delay": 18, 
+            "end": 1598598000000, 
+            "machine": 1, 
+            "progress": 93, 
+            "start": 1598594400000, 
+            "status": 3, 
+            "title": "OT: 868-9545"
+        }, 
+        {
+            "end": 1598655600000, 
+            "machine": 1, 
+            "start": 1598616000000, 
+            "status": 1, 
+            "title": "OT: 590-8856"
+        }, 
+        {
+            "delay": 5, 
+            "end": 1598695200000, 
+            "machine": 1, 
+            "progress": 80, 
+            "start": 1598684400000, 
+            "status": 3, 
+            "title": "OT: 977-3974"
+        }, 
+        {
+            "delay": 18, 
+            "end": 1598716800000, 
+            "machine": 1, 
+            "progress": 20, 
+            "start": 1598706000000, 
+            "status": 3, 
+            "title": "OT: 467-5688"
+        }, 
+        {
+            "end": 1598760000000, 
+            "machine": 1, 
+            "start": 1598734800000, 
+            "status": 2, 
+            "title": "OT: 54-2755"
+        }, 
+        {
+            "end": 1598821200000, 
+            "machine": 1, 
+            "start": 1598781600000, 
+            "status": 4, 
+            "title": "OT: 660-6252"
+        }, 
+        {
+            "end": 1598882400000, 
+            "machine": 1, 
+            "start": 1598846400000, 
+            "status": 1, 
+            "title": "OT: 942-5059"
+        }, 
+        {
+            "end": 1598904000000, 
+            "machine": 1, 
+            "start": 1598896800000, 
+            "status": 1, 
+            "title": "OT: 789-1029"
+        }, 
+        {
+            "delay": 27, 
+            "end": 1598972400000, 
+            "machine": 1, 
+            "progress": 10, 
+            "start": 1598932800000, 
+            "status": 3, 
+            "title": "OT: 606-480"
+        }, 
+        {
+            "end": 1596286800000, 
+            "machine": 2, 
+            "start": 1596283200000, 
+            "status": 1, 
+            "title": "OT: 162-4066"
+        }, 
+        {
+            "end": 1596348000000, 
+            "machine": 2, 
+            "start": 1596304800000, 
+            "status": 1, 
+            "title": "OT: 582-3102"
+        }, 
+        {
+            "delay": 6, 
+            "end": 1596376800000, 
+            "machine": 2, 
+            "progress": 59, 
+            "start": 1596355200000, 
+            "status": 3, 
+            "title": "OT: 126-9051"
+        }, 
+        {
+            "end": 1596438000000, 
+            "machine": 2, 
+            "start": 1596402000000, 
+            "status": 2, 
+            "title": "OT: 92-6604"
+        }, 
+        {
+            "end": 1596474000000, 
+            "machine": 2, 
+            "start": 1596459600000, 
+            "status": 2, 
+            "title": "OT: 279-2037"
+        }, 
+        {
+            "end": 1596535200000, 
+            "machine": 2, 
+            "start": 1596492000000, 
+            "status": 1, 
+            "title": "OT: 467-4527"
+        }, 
+        {
+            "delay": 29, 
+            "end": 1596582000000, 
+            "machine": 2, 
+            "progress": 99, 
+            "start": 1596564000000, 
+            "status": 3, 
+            "title": "OT: 536-2683"
+        }, 
+        {
+            "delay": 13, 
+            "end": 1596603600000, 
+            "machine": 2, 
+            "progress": 87, 
+            "start": 1596600000000, 
+            "status": 3, 
+            "title": "OT: 381-3652"
+        }, 
+        {
+            "end": 1596646800000, 
+            "machine": 2, 
+            "start": 1596621600000, 
+            "status": 2, 
+            "title": "OT: 701-907"
+        }, 
+        {
+            "end": 1596693600000, 
+            "machine": 2, 
+            "start": 1596664800000, 
+            "status": 4, 
+            "title": "OT: 365-7600"
+        }, 
+        {
+            "end": 1596722400000, 
+            "machine": 2, 
+            "start": 1596715200000, 
+            "status": 2, 
+            "title": "OT: 56-3759"
+        }, 
+        {
+            "end": 1596751200000, 
+            "machine": 2, 
+            "start": 1596740400000, 
+            "status": 1, 
+            "title": "OT: 374-4652"
+        }, 
+        {
+            "end": 1596783600000, 
+            "machine": 2, 
+            "start": 1596769200000, 
+            "status": 4, 
+            "title": "OT: 41-3605"
+        }, 
+        {
+            "end": 1596837600000, 
+            "machine": 2, 
+            "start": 1596812400000, 
+            "status": 4, 
+            "title": "OT: 190-3909"
+        }, 
+        {
+            "end": 1596852000000, 
+            "machine": 2, 
+            "start": 1596844800000, 
+            "status": 2, 
+            "title": "OT: 406-3161"
+        }, 
+        {
+            "end": 1596884400000, 
+            "machine": 2, 
+            "start": 1596866400000, 
+            "status": 1, 
+            "title": "OT: 523-8430"
+        }, 
+        {
+            "delay": 17, 
+            "end": 1596916800000, 
+            "machine": 2, 
+            "progress": 52, 
+            "start": 1596895200000, 
+            "status": 3, 
+            "title": "OT: 939-2950"
+        }, 
+        {
+            "end": 1596960000000, 
+            "machine": 2, 
+            "start": 1596934800000, 
+            "status": 4, 
+            "title": "OT: 458-4556"
+        }, 
+        {
+            "delay": 17, 
+            "end": 1597024800000, 
+            "machine": 2, 
+            "progress": 16, 
+            "start": 1596981600000, 
+            "status": 3, 
+            "title": "OT: 482-3160"
+        }, 
+        {
+            "end": 1597035600000, 
+            "machine": 2, 
+            "start": 1597032000000, 
+            "status": 1, 
+            "title": "OT: 292-3416"
+        }, 
+        {
+            "end": 1597068000000, 
+            "machine": 2, 
+            "start": 1597046400000, 
+            "status": 1, 
+            "title": "OT: 169-8778"
+        }, 
+        {
+            "end": 1597125600000, 
+            "machine": 2, 
+            "start": 1597096800000, 
+            "status": 1, 
+            "title": "OT: 581-8352"
+        }, 
+        {
+            "end": 1597161600000, 
+            "machine": 2, 
+            "start": 1597136400000, 
+            "status": 4, 
+            "title": "OT: 627-8692"
+        }, 
+        {
+            "end": 1597212000000, 
+            "machine": 2, 
+            "start": 1597176000000, 
+            "status": 1, 
+            "title": "OT: 769-1972"
+        }, 
+        {
+            "end": 1597258800000, 
+            "machine": 2, 
+            "start": 1597226400000, 
+            "status": 4, 
+            "title": "OT: 879-2865"
+        }, 
+        {
+            "end": 1597305600000, 
+            "machine": 2, 
+            "start": 1597284000000, 
+            "status": 2, 
+            "title": "OT: 481-7977"
+        }, 
+        {
+            "end": 1597348800000, 
+            "machine": 2, 
+            "start": 1597323600000, 
+            "status": 1, 
+            "title": "OT: 356-6667"
+        }, 
+        {
+            "end": 1597384800000, 
+            "machine": 2, 
+            "start": 1597370400000, 
+            "status": 2, 
+            "title": "OT: 622-7044"
+        }, 
+        {
+            "end": 1597442400000, 
+            "machine": 2, 
+            "start": 1597402800000, 
+            "status": 4, 
+            "title": "OT: 925-4430"
+        }, 
+        {
+            "end": 1597485600000, 
+            "machine": 2, 
+            "start": 1597464000000, 
+            "status": 1, 
+            "title": "OT: 589-3616"
+        }, 
+        {
+            "end": 1597503600000, 
+            "machine": 2, 
+            "start": 1597489200000, 
+            "status": 1, 
+            "title": "OT: 864-9028"
+        }, 
+        {
+            "end": 1597557600000, 
+            "machine": 2, 
+            "start": 1597521600000, 
+            "status": 1, 
+            "title": "OT: 581-8437"
+        }, 
+        {
+            "end": 1597626000000, 
+            "machine": 2, 
+            "start": 1597586400000, 
+            "status": 2, 
+            "title": "OT: 143-8425"
+        }, 
+        {
+            "end": 1597680000000, 
+            "machine": 2, 
+            "start": 1597636800000, 
+            "status": 4, 
+            "title": "OT: 329-8422"
+        }, 
+        {
+            "end": 1597734000000, 
+            "machine": 2, 
+            "start": 1597708800000, 
+            "status": 1, 
+            "title": "OT: 860-5144"
+        }, 
+        {
+            "end": 1597777200000, 
+            "machine": 2, 
+            "start": 1597759200000, 
+            "status": 4, 
+            "title": "OT: 902-2198"
+        }, 
+        {
+            "end": 1597802400000, 
+            "machine": 2, 
+            "start": 1597791600000, 
+            "status": 1, 
+            "title": "OT: 900-4133"
+        }, 
+        {
+            "end": 1597827600000, 
+            "machine": 2, 
+            "start": 1597816800000, 
+            "status": 4, 
+            "title": "OT: 975-4000"
+        }, 
+        {
+            "end": 1597863600000, 
+            "machine": 2, 
+            "start": 1597856400000, 
+            "status": 4, 
+            "title": "OT: 39-830"
+        }, 
+        {
+            "delay": 27, 
+            "end": 1597885200000, 
+            "machine": 2, 
+            "progress": 24, 
+            "start": 1597874400000, 
+            "status": 3, 
+            "title": "OT: 684-5902"
+        }, 
+        {
+            "end": 1597939200000, 
+            "machine": 2, 
+            "start": 1597914000000, 
+            "status": 1, 
+            "title": "OT: 552-8137"
+        }, 
+        {
+            "end": 1597975200000, 
+            "machine": 2, 
+            "start": 1597960800000, 
+            "status": 1, 
+            "title": "OT: 149-8705"
+        }, 
+        {
+            "delay": 23, 
+            "end": 1598011200000, 
+            "machine": 2, 
+            "progress": 77, 
+            "start": 1597978800000, 
+            "status": 3, 
+            "title": "OT: 27-8580"
+        }, 
+        {
+            "end": 1598036400000, 
+            "machine": 2, 
+            "start": 1598018400000, 
+            "status": 1, 
+            "title": "OT: 253-5017"
+        }, 
+        {
+            "end": 1598086800000, 
+            "machine": 2, 
+            "start": 1598065200000, 
+            "status": 2, 
+            "title": "OT: 868-9754"
+        }, 
+        {
+            "end": 1598097600000, 
+            "machine": 2, 
+            "start": 1598094000000, 
+            "status": 4, 
+            "title": "OT: 53-5100"
+        }, 
+        {
+            "end": 1598144400000, 
+            "machine": 2, 
+            "start": 1598104800000, 
+            "status": 1, 
+            "title": "OT: 183-7231"
+        }, 
+        {
+            "end": 1598184000000, 
+            "machine": 2, 
+            "start": 1598151600000, 
+            "status": 2, 
+            "title": "OT: 443-6116"
+        }, 
+        {
+            "end": 1598191200000, 
+            "machine": 2, 
+            "start": 1598187600000, 
+            "status": 2, 
+            "title": "OT: 299-5948"
+        }, 
+        {
+            "end": 1598245200000, 
+            "machine": 2, 
+            "start": 1598209200000, 
+            "status": 1, 
+            "title": "OT: 510-9150"
+        }, 
+        {
+            "end": 1598274000000, 
+            "machine": 2, 
+            "start": 1598256000000, 
+            "status": 2, 
+            "title": "OT: 224-1035"
+        }, 
+        {
+            "end": 1598320800000, 
+            "machine": 2, 
+            "start": 1598299200000, 
+            "status": 4, 
+            "title": "OT: 99-3774"
+        }, 
+        {
+            "end": 1598367600000, 
+            "machine": 2, 
+            "start": 1598335200000, 
+            "status": 2, 
+            "title": "OT: 372-2453"
+        }, 
+        {
+            "delay": 21, 
+            "end": 1598425200000, 
+            "machine": 2, 
+            "progress": 72, 
+            "start": 1598396400000, 
+            "status": 3, 
+            "title": "OT: 518-2258"
+        }, 
+        {
+            "end": 1598461200000, 
+            "machine": 2, 
+            "start": 1598436000000, 
+            "status": 4, 
+            "title": "OT: 400-4462"
+        }, 
+        {
+            "end": 1598490000000, 
+            "machine": 2, 
+            "start": 1598479200000, 
+            "status": 4, 
+            "title": "OT: 111-1817"
+        }, 
+        {
+            "delay": 30, 
+            "end": 1598518800000, 
+            "machine": 2, 
+            "progress": 43, 
+            "start": 1598511600000, 
+            "status": 3, 
+            "title": "OT: 828-3828"
+        }, 
+        {
+            "end": 1598551200000, 
+            "machine": 2, 
+            "start": 1598540400000, 
+            "status": 1, 
+            "title": "OT: 457-738"
+        }, 
+        {
+            "end": 1598623200000, 
+            "machine": 2, 
+            "start": 1598580000000, 
+            "status": 1, 
+            "title": "OT: 537-1424"
+        }, 
+        {
+            "delay": 9, 
+            "end": 1598641200000, 
+            "machine": 2, 
+            "progress": 84, 
+            "start": 1598634000000, 
+            "status": 3, 
+            "title": "OT: 500-2957"
+        }, 
+        {
+            "end": 1598659200000, 
+            "machine": 2, 
+            "start": 1598652000000, 
+            "status": 4, 
+            "title": "OT: 363-5823"
+        }, 
+        {
+            "end": 1598724000000, 
+            "machine": 2, 
+            "start": 1598688000000, 
+            "status": 1, 
+            "title": "OT: 512-8301"
+        }, 
+        {
+            "end": 1598742000000, 
+            "machine": 2, 
+            "start": 1598738400000, 
+            "status": 1, 
+            "title": "OT: 827-1143"
+        }, 
+        {
+            "end": 1598792400000, 
+            "machine": 2, 
+            "start": 1598770800000, 
+            "status": 2, 
+            "title": "OT: 566-7015"
+        }, 
+        {
+            "end": 1598835600000, 
+            "machine": 2, 
+            "start": 1598796000000, 
+            "status": 4, 
+            "title": "OT: 759-3099"
+        }, 
+        {
+            "end": 1598850000000, 
+            "machine": 2, 
+            "start": 1598842800000, 
+            "status": 2, 
+            "title": "OT: 975-6673"
+        }, 
+        {
+            "end": 1598889600000, 
+            "machine": 2, 
+            "start": 1598864400000, 
+            "status": 4, 
+            "title": "OT: 326-7262"
+        }, 
+        {
+            "end": 1598911200000, 
+            "machine": 2, 
+            "start": 1598896800000, 
+            "status": 2, 
+            "title": "OT: 852-4494"
+        }, 
+        {
+            "end": 1598936400000, 
+            "machine": 2, 
+            "start": 1598932800000, 
+            "status": 1, 
+            "title": "OT: 935-2626"
+        }, 
+        {
+            "end": 1599004800000, 
+            "machine": 2, 
+            "start": 1598965200000, 
+            "status": 1, 
+            "title": "OT: 958-6299"
+        }, 
+        {
+            "delay": 14, 
+            "end": 1596265200000, 
+            "machine": 3, 
+            "progress": 11, 
+            "start": 1596261600000, 
+            "status": 3, 
+            "title": "OT: 168-5191"
+        }, 
+        {
+            "delay": 17, 
+            "end": 1596297600000, 
+            "machine": 3, 
+            "progress": 28, 
+            "start": 1596290400000, 
+            "status": 3, 
+            "title": "OT: 33-5014"
+        }, 
+        {
+            "delay": 21, 
+            "end": 1596351600000, 
+            "machine": 3, 
+            "progress": 43, 
+            "start": 1596315600000, 
+            "status": 3, 
+            "title": "OT: 259-9257"
+        }, 
+        {
+            "end": 1596398400000, 
+            "machine": 3, 
+            "start": 1596376800000, 
+            "status": 2, 
+            "title": "OT: 410-1858"
+        }, 
+        {
+            "end": 1596427200000, 
+            "machine": 3, 
+            "start": 1596409200000, 
+            "status": 2, 
+            "title": "OT: 230-8127"
+        }, 
+        {
+            "end": 1596448800000, 
+            "machine": 3, 
+            "start": 1596430800000, 
+            "status": 2, 
+            "title": "OT: 788-7512"
+        }, 
+        {
+            "end": 1596495600000, 
+            "machine": 3, 
+            "start": 1596470400000, 
+            "status": 2, 
+            "title": "OT: 67-6595"
+        }, 
+        {
+            "end": 1596535200000, 
+            "machine": 3, 
+            "start": 1596517200000, 
+            "status": 2, 
+            "title": "OT: 331-2522"
+        }, 
+        {
+            "delay": 23, 
+            "end": 1596585600000, 
+            "machine": 3, 
+            "progress": 65, 
+            "start": 1596542400000, 
+            "status": 3, 
+            "title": "OT: 497-1841"
+        }, 
+        {
+            "delay": 26, 
+            "end": 1596614400000, 
+            "machine": 3, 
+            "progress": 32, 
+            "start": 1596607200000, 
+            "status": 3, 
+            "title": "OT: 395-5682"
+        }, 
+        {
+            "end": 1596654000000, 
+            "machine": 3, 
+            "start": 1596639600000, 
+            "status": 2, 
+            "title": "OT: 98-4996"
+        }, 
+        {
+            "delay": 28, 
+            "end": 1596711600000, 
+            "machine": 3, 
+            "progress": 51, 
+            "start": 1596679200000, 
+            "status": 3, 
+            "title": "OT: 460-1372"
+        }, 
+        {
+            "end": 1596729600000, 
+            "machine": 3, 
+            "start": 1596715200000, 
+            "status": 2, 
+            "title": "OT: 207-5956"
+        }, 
+        {
+            "end": 1596762000000, 
+            "machine": 3, 
+            "start": 1596758400000, 
+            "status": 4, 
+            "title": "OT: 270-683"
+        }, 
+        {
+            "end": 1596794400000, 
+            "machine": 3, 
+            "start": 1596776400000, 
+            "status": 1, 
+            "title": "OT: 823-3847"
+        }, 
+        {
+            "end": 1596855600000, 
+            "machine": 3, 
+            "start": 1596812400000, 
+            "status": 1, 
+            "title": "OT: 788-9640"
+        }, 
+        {
+            "delay": 6, 
+            "end": 1596913200000, 
+            "machine": 3, 
+            "progress": 21, 
+            "start": 1596880800000, 
+            "status": 3, 
+            "title": "OT: 192-3887"
+        }, 
+        {
+            "delay": 11, 
+            "end": 1596963600000, 
+            "machine": 3, 
+            "progress": 3, 
+            "start": 1596924000000, 
+            "status": 3, 
+            "title": "OT: 605-6669"
+        }, 
+        {
+            "end": 1597010400000, 
+            "machine": 3, 
+            "start": 1596981600000, 
+            "status": 1, 
+            "title": "OT: 75-8244"
+        }, 
+        {
+            "delay": 23, 
+            "end": 1597064400000, 
+            "machine": 3, 
+            "progress": 5, 
+            "start": 1597028400000, 
+            "status": 3, 
+            "title": "OT: 820-3045"
+        }, 
+        {
+            "end": 1597118400000, 
+            "machine": 3, 
+            "start": 1597086000000, 
+            "status": 1, 
+            "title": "OT: 226-7253"
+        }, 
+        {
+            "end": 1597165200000, 
+            "machine": 3, 
+            "start": 1597140000000, 
+            "status": 4, 
+            "title": "OT: 453-7205"
+        }, 
+        {
+            "end": 1597197600000, 
+            "machine": 3, 
+            "start": 1597176000000, 
+            "status": 1, 
+            "title": "OT: 285-6805"
+        }, 
+        {
+            "end": 1597222800000, 
+            "machine": 3, 
+            "start": 1597219200000, 
+            "status": 2, 
+            "title": "OT: 411-8710"
+        }, 
+        {
+            "end": 1597255200000, 
+            "machine": 3, 
+            "start": 1597240800000, 
+            "status": 4, 
+            "title": "OT: 824-388"
+        }, 
+        {
+            "end": 1597298400000, 
+            "machine": 3, 
+            "start": 1597269600000, 
+            "status": 2, 
+            "title": "OT: 279-489"
+        }, 
+        {
+            "end": 1597341600000, 
+            "machine": 3, 
+            "start": 1597312800000, 
+            "status": 2, 
+            "title": "OT: 993-6165"
+        }, 
+        {
+            "end": 1597363200000, 
+            "machine": 3, 
+            "start": 1597348800000, 
+            "status": 1, 
+            "title": "OT: 399-5430"
+        }, 
+        {
+            "end": 1597424400000, 
+            "machine": 3, 
+            "start": 1597384800000, 
+            "status": 1, 
+            "title": "OT: 951-1940"
+        }, 
+        {
+            "end": 1597478400000, 
+            "machine": 3, 
+            "start": 1597449600000, 
+            "status": 4, 
+            "title": "OT: 34-2351"
+        }, 
+        {
+            "end": 1597528800000, 
+            "machine": 3, 
+            "start": 1597485600000, 
+            "status": 1, 
+            "title": "OT: 487-9735"
+        }, 
+        {
+            "end": 1597554000000, 
+            "machine": 3, 
+            "start": 1597550400000, 
+            "status": 1, 
+            "title": "OT: 721-918"
+        }, 
+        {
+            "delay": 14, 
+            "end": 1597586400000, 
+            "machine": 3, 
+            "progress": 26, 
+            "start": 1597572000000, 
+            "status": 3, 
+            "title": "OT: 440-1443"
+        }, 
+        {
+            "end": 1597644000000, 
+            "machine": 3, 
+            "start": 1597604400000, 
+            "status": 4, 
+            "title": "OT: 408-581"
+        }, 
+        {
+            "end": 1597705200000, 
+            "machine": 3, 
+            "start": 1597665600000, 
+            "status": 1, 
+            "title": "OT: 634-9283"
+        }, 
+        {
+            "delay": 6, 
+            "end": 1597759200000, 
+            "machine": 3, 
+            "progress": 22, 
+            "start": 1597726800000, 
+            "status": 3, 
+            "title": "OT: 712-7769"
+        }, 
+        {
+            "end": 1597780800000, 
+            "machine": 3, 
+            "start": 1597766400000, 
+            "status": 4, 
+            "title": "OT: 6-2134"
+        }, 
+        {
+            "end": 1597802400000, 
+            "machine": 3, 
+            "start": 1597784400000, 
+            "status": 4, 
+            "title": "OT: 864-4815"
+        }, 
+        {
+            "delay": 11, 
+            "end": 1597842000000, 
+            "machine": 3, 
+            "progress": 28, 
+            "start": 1597827600000, 
+            "status": 3, 
+            "title": "OT: 629-5043"
+        }, 
+        {
+            "delay": 29, 
+            "end": 1597870800000, 
+            "machine": 3, 
+            "progress": 16, 
+            "start": 1597856400000, 
+            "status": 3, 
+            "title": "OT: 841-5965"
+        }, 
+        {
+            "end": 1597924800000, 
+            "machine": 3, 
+            "start": 1597885200000, 
+            "status": 1, 
+            "title": "OT: 272-9210"
+        }, 
+        {
+            "end": 1597957200000, 
+            "machine": 3, 
+            "start": 1597939200000, 
+            "status": 1, 
+            "title": "OT: 335-9224"
+        }, 
+        {
+            "end": 1597986000000, 
+            "machine": 3, 
+            "start": 1597971600000, 
+            "status": 2, 
+            "title": "OT: 78-7068"
+        }, 
+        {
+            "delay": 26, 
+            "end": 1598040000000, 
+            "machine": 3, 
+            "progress": 51, 
+            "start": 1597996800000, 
+            "status": 3, 
+            "title": "OT: 587-6692"
+        }, 
+        {
+            "end": 1598090400000, 
+            "machine": 3, 
+            "start": 1598050800000, 
+            "status": 1, 
+            "title": "OT: 239-5126"
+        }, 
+        {
+            "end": 1598119200000, 
+            "machine": 3, 
+            "start": 1598108400000, 
+            "status": 1, 
+            "title": "OT: 516-8995"
+        }, 
+        {
+            "delay": 11, 
+            "end": 1598173200000, 
+            "machine": 3, 
+            "progress": 85, 
+            "start": 1598144400000, 
+            "status": 3, 
+            "title": "OT: 130-5560"
+        }, 
+        {
+            "end": 1598180400000, 
+            "machine": 3, 
+            "start": 1598176800000, 
+            "status": 2, 
+            "title": "OT: 539-5868"
+        }, 
+        {
+            "end": 1598209200000, 
+            "machine": 3, 
+            "start": 1598184000000, 
+            "status": 1, 
+            "title": "OT: 133-1001"
+        }, 
+        {
+            "delay": 16, 
+            "end": 1598252400000, 
+            "machine": 3, 
+            "progress": 68, 
+            "start": 1598238000000, 
+            "status": 3, 
+            "title": "OT: 589-6033"
+        }, 
+        {
+            "end": 1598295600000, 
+            "machine": 3, 
+            "start": 1598270400000, 
+            "status": 1, 
+            "title": "OT: 1000-8263"
+        }, 
+        {
+            "delay": 19, 
+            "end": 1598338800000, 
+            "machine": 3, 
+            "progress": 91, 
+            "start": 1598306400000, 
+            "status": 3, 
+            "title": "OT: 245-6467"
+        }, 
+        {
+            "end": 1598353200000, 
+            "machine": 3, 
+            "start": 1598346000000, 
+            "status": 2, 
+            "title": "OT: 463-3749"
+        }, 
+        {
+            "end": 1598396400000, 
+            "machine": 3, 
+            "start": 1598382000000, 
+            "status": 1, 
+            "title": "OT: 457-2701"
+        }, 
+        {
+            "end": 1598432400000, 
+            "machine": 3, 
+            "start": 1598414400000, 
+            "status": 4, 
+            "title": "OT: 763-5708"
+        }, 
+        {
+            "end": 1598461200000, 
+            "machine": 3, 
+            "start": 1598454000000, 
+            "status": 2, 
+            "title": "OT: 978-6462"
+        }, 
+        {
+            "delay": 10, 
+            "end": 1598500800000, 
+            "machine": 3, 
+            "progress": 21, 
+            "start": 1598479200000, 
+            "status": 3, 
+            "title": "OT: 705-8973"
+        }, 
+        {
+            "end": 1598511600000, 
+            "machine": 3, 
+            "start": 1598504400000, 
+            "status": 4, 
+            "title": "OT: 855-1344"
+        }, 
+        {
+            "end": 1598558400000, 
+            "machine": 3, 
+            "start": 1598533200000, 
+            "status": 1, 
+            "title": "OT: 602-5121"
+        }, 
+        {
+            "delay": 25, 
+            "end": 1598626800000, 
+            "machine": 3, 
+            "progress": 65, 
+            "start": 1598587200000, 
+            "status": 3, 
+            "title": "OT: 369-6267"
+        }, 
+        {
+            "end": 1598670000000, 
+            "machine": 3, 
+            "start": 1598637600000, 
+            "status": 1, 
+            "title": "OT: 548-6151"
+        }, 
+        {
+            "delay": 9, 
+            "end": 1598738400000, 
+            "machine": 3, 
+            "progress": 1, 
+            "start": 1598698800000, 
+            "status": 3, 
+            "title": "OT: 971-4051"
+        }, 
+        {
+            "end": 1598752800000, 
+            "machine": 3, 
+            "start": 1598742000000, 
+            "status": 1, 
+            "title": "OT: 51-2620"
+        }, 
+        {
+            "end": 1598792400000, 
+            "machine": 3, 
+            "start": 1598781600000, 
+            "status": 1, 
+            "title": "OT: 716-6575"
+        }, 
+        {
+            "end": 1598824800000, 
+            "machine": 3, 
+            "start": 1598810400000, 
+            "status": 4, 
+            "title": "OT: 509-3384"
+        }, 
+        {
+            "end": 1598868000000, 
+            "machine": 3, 
+            "start": 1598828400000, 
+            "status": 1, 
+            "title": "OT: 84-3148"
+        }, 
+        {
+            "end": 1598914800000, 
+            "machine": 3, 
+            "start": 1598878800000, 
+            "status": 2, 
+            "title": "OT: 59-6411"
+        }, 
+        {
+            "end": 1598986800000, 
+            "machine": 3, 
+            "start": 1598943600000, 
+            "status": 4, 
+            "title": "OT: 481-1731"
+        }, 
+        {
+            "end": 1596294000000, 
+            "machine": 4, 
+            "start": 1596283200000, 
+            "status": 4, 
+            "title": "OT: 878-9494"
+        }, 
+        {
+            "end": 1596319200000, 
+            "machine": 4, 
+            "start": 1596297600000, 
+            "status": 1, 
+            "title": "OT: 875-3038"
+        }, 
+        {
+            "delay": 12, 
+            "end": 1596373200000, 
+            "machine": 4, 
+            "progress": 89, 
+            "start": 1596337200000, 
+            "status": 3, 
+            "title": "OT: 920-5943"
+        }, 
+        {
+            "delay": 20, 
+            "end": 1596398400000, 
+            "machine": 4, 
+            "progress": 88, 
+            "start": 1596384000000, 
+            "status": 3, 
+            "title": "OT: 150-8172"
+        }, 
+        {
+            "delay": 8, 
+            "end": 1596445200000, 
+            "machine": 4, 
+            "progress": 83, 
+            "start": 1596402000000, 
+            "status": 3, 
+            "title": "OT: 685-8647"
+        }, 
+        {
+            "end": 1596499200000, 
+            "machine": 4, 
+            "start": 1596459600000, 
+            "status": 4, 
+            "title": "OT: 696-3847"
+        }, 
+        {
+            "end": 1596528000000, 
+            "machine": 4, 
+            "start": 1596502800000, 
+            "status": 1, 
+            "title": "OT: 763-9640"
+        }, 
+        {
+            "delay": 21, 
+            "end": 1596567600000, 
+            "machine": 4, 
+            "progress": 74, 
+            "start": 1596538800000, 
+            "status": 3, 
+            "title": "OT: 157-1539"
+        }, 
+        {
+            "end": 1596621600000, 
+            "machine": 4, 
+            "start": 1596582000000, 
+            "status": 4, 
+            "title": "OT: 560-5832"
+        }, 
+        {
+            "end": 1596650400000, 
+            "machine": 4, 
+            "start": 1596643200000, 
+            "status": 2, 
+            "title": "OT: 441-7945"
+        }, 
+        {
+            "end": 1596690000000, 
+            "machine": 4, 
+            "start": 1596657600000, 
+            "status": 1, 
+            "title": "OT: 597-8186"
+        }, 
+        {
+            "end": 1596704400000, 
+            "machine": 4, 
+            "start": 1596693600000, 
+            "status": 2, 
+            "title": "OT: 272-9749"
+        }, 
+        {
+            "delay": 18, 
+            "end": 1596765600000, 
+            "machine": 4, 
+            "progress": 63, 
+            "start": 1596722400000, 
+            "status": 3, 
+            "title": "OT: 367-6180"
+        }, 
+        {
+            "delay": 20, 
+            "end": 1596823200000, 
+            "machine": 4, 
+            "progress": 73, 
+            "start": 1596787200000, 
+            "status": 3, 
+            "title": "OT: 992-1273"
+        }, 
+        {
+            "end": 1596873600000, 
+            "machine": 4, 
+            "start": 1596830400000, 
+            "status": 4, 
+            "title": "OT: 961-2881"
+        }, 
+        {
+            "end": 1596916800000, 
+            "machine": 4, 
+            "start": 1596880800000, 
+            "status": 1, 
+            "title": "OT: 684-6404"
+        }, 
+        {
+            "delay": 28, 
+            "end": 1596952800000, 
+            "machine": 4, 
+            "progress": 16, 
+            "start": 1596942000000, 
+            "status": 3, 
+            "title": "OT: 399-9166"
+        }, 
+        {
+            "end": 1596999600000, 
+            "machine": 4, 
+            "start": 1596970800000, 
+            "status": 2, 
+            "title": "OT: 891-7194"
+        }, 
+        {
+            "end": 1597024800000, 
+            "machine": 4, 
+            "start": 1597003200000, 
+            "status": 4, 
+            "title": "OT: 119-7364"
+        }, 
+        {
+            "end": 1597046400000, 
+            "machine": 4, 
+            "start": 1597032000000, 
+            "status": 2, 
+            "title": "OT: 161-331"
+        }, 
+        {
+            "delay": 22, 
+            "end": 1597100400000, 
+            "machine": 4, 
+            "progress": 38, 
+            "start": 1597071600000, 
+            "status": 3, 
+            "title": "OT: 743-5213"
+        }, 
+        {
+            "delay": 9, 
+            "end": 1597114800000, 
+            "machine": 4, 
+            "progress": 16, 
+            "start": 1597107600000, 
+            "status": 3, 
+            "title": "OT: 413-5757"
+        }, 
+        {
+            "end": 1597140000000, 
+            "machine": 4, 
+            "start": 1597122000000, 
+            "status": 4, 
+            "title": "OT: 926-1494"
+        }, 
+        {
+            "delay": 11, 
+            "end": 1597201200000, 
+            "machine": 4, 
+            "progress": 14, 
+            "start": 1597165200000, 
+            "status": 3, 
+            "title": "OT: 571-8371"
+        }, 
+        {
+            "end": 1597244400000, 
+            "machine": 4, 
+            "start": 1597208400000, 
+            "status": 1, 
+            "title": "OT: 488-570"
+        }, 
+        {
+            "end": 1597284000000, 
+            "machine": 4, 
+            "start": 1597255200000, 
+            "status": 2, 
+            "title": "OT: 579-7297"
+        }, 
+        {
+            "end": 1597345200000, 
+            "machine": 4, 
+            "start": 1597305600000, 
+            "status": 1, 
+            "title": "OT: 421-6896"
+        }, 
+        {
+            "end": 1597413600000, 
+            "machine": 4, 
+            "start": 1597370400000, 
+            "status": 4, 
+            "title": "OT: 14-5024"
+        }, 
+        {
+            "end": 1597456800000, 
+            "machine": 4, 
+            "start": 1597424400000, 
+            "status": 4, 
+            "title": "OT: 517-8158"
+        }, 
+        {
+            "end": 1597478400000, 
+            "machine": 4, 
+            "start": 1597467600000, 
+            "status": 4, 
+            "title": "OT: 942-6506"
+        }, 
+        {
+            "end": 1597543200000, 
+            "machine": 4, 
+            "start": 1597503600000, 
+            "status": 2, 
+            "title": "OT: 778-8875"
+        }, 
+        {
+            "end": 1597586400000, 
+            "machine": 4, 
+            "start": 1597568400000, 
+            "status": 4, 
+            "title": "OT: 377-5708"
+        }, 
+        {
+            "end": 1597615200000, 
+            "machine": 4, 
+            "start": 1597611600000, 
+            "status": 1, 
+            "title": "OT: 403-8268"
+        }, 
+        {
+            "end": 1597647600000, 
+            "machine": 4, 
+            "start": 1597626000000, 
+            "status": 4, 
+            "title": "OT: 544-107"
+        }, 
+        {
+            "end": 1597680000000, 
+            "machine": 4, 
+            "start": 1597665600000, 
+            "status": 4, 
+            "title": "OT: 354-9021"
+        }, 
+        {
+            "end": 1597719600000, 
+            "machine": 4, 
+            "start": 1597701600000, 
+            "status": 4, 
+            "title": "OT: 299-1244"
+        }, 
+        {
+            "end": 1597755600000, 
+            "machine": 4, 
+            "start": 1597734000000, 
+            "status": 4, 
+            "title": "OT: 83-582"
+        }, 
+        {
+            "end": 1597802400000, 
+            "machine": 4, 
+            "start": 1597784400000, 
+            "status": 2, 
+            "title": "OT: 649-1720"
+        }, 
+        {
+            "end": 1597827600000, 
+            "machine": 4, 
+            "start": 1597820400000, 
+            "status": 2, 
+            "title": "OT: 469-9053"
+        }, 
+        {
+            "end": 1597856400000, 
+            "machine": 4, 
+            "start": 1597849200000, 
+            "status": 4, 
+            "title": "OT: 800-4640"
+        }, 
+        {
+            "end": 1597914000000, 
+            "machine": 4, 
+            "start": 1597878000000, 
+            "status": 1, 
+            "title": "OT: 209-1037"
+        }, 
+        {
+            "end": 1597935600000, 
+            "machine": 4, 
+            "start": 1597917600000, 
+            "status": 4, 
+            "title": "OT: 605-7667"
+        }, 
+        {
+            "delay": 24, 
+            "end": 1597989600000, 
+            "machine": 4, 
+            "progress": 65, 
+            "start": 1597957200000, 
+            "status": 3, 
+            "title": "OT: 635-3105"
+        }, 
+        {
+            "end": 1598022000000, 
+            "machine": 4, 
+            "start": 1597996800000, 
+            "status": 4, 
+            "title": "OT: 377-8375"
+        }, 
+        {
+            "delay": 8, 
+            "end": 1598079600000, 
+            "machine": 4, 
+            "progress": 49, 
+            "start": 1598047200000, 
+            "status": 3, 
+            "title": "OT: 476-9768"
+        }, 
+        {
+            "end": 1598130000000, 
+            "machine": 4, 
+            "start": 1598101200000, 
+            "status": 2, 
+            "title": "OT: 170-1051"
+        }, 
+        {
+            "end": 1598148000000, 
+            "machine": 4, 
+            "start": 1598133600000, 
+            "status": 4, 
+            "title": "OT: 466-1593"
+        }, 
+        {
+            "end": 1598198400000, 
+            "machine": 4, 
+            "start": 1598158800000, 
+            "status": 1, 
+            "title": "OT: 40-693"
+        }, 
+        {
+            "end": 1598259600000, 
+            "machine": 4, 
+            "start": 1598227200000, 
+            "status": 1, 
+            "title": "OT: 982-3465"
+        }, 
+        {
+            "end": 1598310000000, 
+            "machine": 4, 
+            "start": 1598284800000, 
+            "status": 1, 
+            "title": "OT: 197-5910"
+        }, 
+        {
+            "end": 1598338800000, 
+            "machine": 4, 
+            "start": 1598324400000, 
+            "status": 4, 
+            "title": "OT: 340-8316"
+        }, 
+        {
+            "delay": 15, 
+            "end": 1598382000000, 
+            "machine": 4, 
+            "progress": 87, 
+            "start": 1598349600000, 
+            "status": 3, 
+            "title": "OT: 361-2828"
+        }, 
+        {
+            "delay": 30, 
+            "end": 1598443200000, 
+            "machine": 4, 
+            "progress": 40, 
+            "start": 1598407200000, 
+            "status": 3, 
+            "title": "OT: 734-9230"
+        }, 
+        {
+            "end": 1598468400000, 
+            "machine": 4, 
+            "start": 1598446800000, 
+            "status": 1, 
+            "title": "OT: 485-9373"
+        }, 
+        {
+            "delay": 15, 
+            "end": 1598515200000, 
+            "machine": 4, 
+            "progress": 4, 
+            "start": 1598472000000, 
+            "status": 3, 
+            "title": "OT: 89-6655"
+        }, 
+        {
+            "end": 1598536800000, 
+            "machine": 4, 
+            "start": 1598522400000, 
+            "status": 4, 
+            "title": "OT: 776-7337"
+        }, 
+        {
+            "delay": 6, 
+            "end": 1598590800000, 
+            "machine": 4, 
+            "progress": 75, 
+            "start": 1598565600000, 
+            "status": 3, 
+            "title": "OT: 902-8214"
+        }, 
+        {
+            "end": 1598619600000, 
+            "machine": 4, 
+            "start": 1598594400000, 
+            "status": 1, 
+            "title": "OT: 619-1378"
+        }, 
+        {
+            "end": 1598652000000, 
+            "machine": 4, 
+            "start": 1598637600000, 
+            "status": 2, 
+            "title": "OT: 505-5671"
+        }, 
+        {
+            "end": 1598713200000, 
+            "machine": 4, 
+            "start": 1598673600000, 
+            "status": 1, 
+            "title": "OT: 909-692"
+        }, 
+        {
+            "delay": 29, 
+            "end": 1598760000000, 
+            "machine": 4, 
+            "progress": 30, 
+            "start": 1598738400000, 
+            "status": 3, 
+            "title": "OT: 542-6101"
+        }, 
+        {
+            "end": 1598767200000, 
+            "machine": 4, 
+            "start": 1598763600000, 
+            "status": 4, 
+            "title": "OT: 193-5153"
+        }, 
+        {
+            "end": 1598796000000, 
+            "machine": 4, 
+            "start": 1598778000000, 
+            "status": 2, 
+            "title": "OT: 106-3403"
+        }, 
+        {
+            "end": 1598839200000, 
+            "machine": 4, 
+            "start": 1598824800000, 
+            "status": 4, 
+            "title": "OT: 186-2735"
+        }, 
+        {
+            "end": 1598907600000, 
+            "machine": 4, 
+            "start": 1598868000000, 
+            "status": 2, 
+            "title": "OT: 15-9946"
+        }, 
+        {
+            "end": 1598961600000, 
+            "machine": 4, 
+            "start": 1598929200000, 
+            "status": 1, 
+            "title": "OT: 502-8890"
+        }, 
+        {
+            "delay": 30, 
+            "end": 1596286800000, 
+            "machine": 5, 
+            "progress": 62, 
+            "start": 1596279600000, 
+            "status": 3, 
+            "title": "OT: 510-5027"
+        }, 
+        {
+            "delay": 20, 
+            "end": 1596326400000, 
+            "machine": 5, 
+            "progress": 99, 
+            "start": 1596294000000, 
+            "status": 3, 
+            "title": "OT: 821-5239"
+        }, 
+        {
+            "end": 1596351600000, 
+            "machine": 5, 
+            "start": 1596337200000, 
+            "status": 4, 
+            "title": "OT: 469-6406"
+        }, 
+        {
+            "end": 1596405600000, 
+            "machine": 5, 
+            "start": 1596366000000, 
+            "status": 2, 
+            "title": "OT: 335-3571"
+        }, 
+        {
+            "end": 1596441600000, 
+            "machine": 5, 
+            "start": 1596434400000, 
+            "status": 1, 
+            "title": "OT: 812-1184"
+        }, 
+        {
+            "end": 1596466800000, 
+            "machine": 5, 
+            "start": 1596452400000, 
+            "status": 1, 
+            "title": "OT: 797-4936"
+        }, 
+        {
+            "end": 1596510000000, 
+            "machine": 5, 
+            "start": 1596484800000, 
+            "status": 2, 
+            "title": "OT: 549-2089"
+        }, 
+        {
+            "delay": 30, 
+            "end": 1596542400000, 
+            "machine": 5, 
+            "progress": 93, 
+            "start": 1596531600000, 
+            "status": 3, 
+            "title": "OT: 645-7550"
+        }, 
+        {
+            "end": 1596564000000, 
+            "machine": 5, 
+            "start": 1596556800000, 
+            "status": 2, 
+            "title": "OT: 10-6650"
+        }, 
+        {
+            "end": 1596603600000, 
+            "machine": 5, 
+            "start": 1596567600000, 
+            "status": 1, 
+            "title": "OT: 57-3947"
+        }, 
+        {
+            "end": 1596639600000, 
+            "machine": 5, 
+            "start": 1596614400000, 
+            "status": 2, 
+            "title": "OT: 744-708"
+        }, 
+        {
+            "end": 1596664800000, 
+            "machine": 5, 
+            "start": 1596643200000, 
+            "status": 4, 
+            "title": "OT: 413-3894"
+        }, 
+        {
+            "end": 1596718800000, 
+            "machine": 5, 
+            "start": 1596690000000, 
+            "status": 4, 
+            "title": "OT: 463-4065"
+        }, 
+        {
+            "delay": 5, 
+            "end": 1596758400000, 
+            "machine": 5, 
+            "progress": 71, 
+            "start": 1596747600000, 
+            "status": 3, 
+            "title": "OT: 174-6490"
+        }, 
+        {
+            "delay": 22, 
+            "end": 1596805200000, 
+            "machine": 5, 
+            "progress": 52, 
+            "start": 1596787200000, 
+            "status": 3, 
+            "title": "OT: 53-6250"
+        }, 
+        {
+            "delay": 28, 
+            "end": 1596834000000, 
+            "machine": 5, 
+            "progress": 20, 
+            "start": 1596819600000, 
+            "status": 3, 
+            "title": "OT: 973-2655"
+        }, 
+        {
+            "delay": 23, 
+            "end": 1596866400000, 
+            "machine": 5, 
+            "progress": 65, 
+            "start": 1596848400000, 
+            "status": 3, 
+            "title": "OT: 268-9636"
+        }, 
+        {
+            "end": 1596906000000, 
+            "machine": 5, 
+            "start": 1596873600000, 
+            "status": 1, 
+            "title": "OT: 224-3236"
+        }, 
+        {
+            "end": 1596945600000, 
+            "machine": 5, 
+            "start": 1596924000000, 
+            "status": 2, 
+            "title": "OT: 157-3584"
+        }, 
+        {
+            "end": 1596999600000, 
+            "machine": 5, 
+            "start": 1596956400000, 
+            "status": 1, 
+            "title": "OT: 307-5027"
+        }, 
+        {
+            "end": 1597024800000, 
+            "machine": 5, 
+            "start": 1597010400000, 
+            "status": 1, 
+            "title": "OT: 405-6227"
+        }, 
+        {
+            "end": 1597064400000, 
+            "machine": 5, 
+            "start": 1597046400000, 
+            "status": 4, 
+            "title": "OT: 518-5854"
+        }, 
+        {
+            "end": 1597107600000, 
+            "machine": 5, 
+            "start": 1597075200000, 
+            "status": 4, 
+            "title": "OT: 134-7824"
+        }, 
+        {
+            "end": 1597132800000, 
+            "machine": 5, 
+            "start": 1597114800000, 
+            "status": 4, 
+            "title": "OT: 602-3277"
+        }, 
+        {
+            "end": 1597197600000, 
+            "machine": 5, 
+            "start": 1597161600000, 
+            "status": 4, 
+            "title": "OT: 784-5586"
+        }, 
+        {
+            "end": 1597222800000, 
+            "machine": 5, 
+            "start": 1597219200000, 
+            "status": 2, 
+            "title": "OT: 643-6502"
+        }, 
+        {
+            "end": 1597240800000, 
+            "machine": 5, 
+            "start": 1597233600000, 
+            "status": 1, 
+            "title": "OT: 375-1347"
+        }, 
+        {
+            "delay": 7, 
+            "end": 1597291200000, 
+            "machine": 5, 
+            "progress": 83, 
+            "start": 1597269600000, 
+            "status": 3, 
+            "title": "OT: 777-2390"
+        }, 
+        {
+            "end": 1597320000000, 
+            "machine": 5, 
+            "start": 1597294800000, 
+            "status": 2, 
+            "title": "OT: 451-2379"
+        }, 
+        {
+            "end": 1597359600000, 
+            "machine": 5, 
+            "start": 1597348800000, 
+            "status": 2, 
+            "title": "OT: 672-1210"
+        }, 
+        {
+            "end": 1597392000000, 
+            "machine": 5, 
+            "start": 1597377600000, 
+            "status": 2, 
+            "title": "OT: 721-2862"
+        }, 
+        {
+            "end": 1597438800000, 
+            "machine": 5, 
+            "start": 1597395600000, 
+            "status": 2, 
+            "title": "OT: 98-2026"
+        }, 
+        {
+            "end": 1597478400000, 
+            "machine": 5, 
+            "start": 1597442400000, 
+            "status": 1, 
+            "title": "OT: 201-7705"
+        }, 
+        {
+            "end": 1597539600000, 
+            "machine": 5, 
+            "start": 1597500000000, 
+            "status": 4, 
+            "title": "OT: 443-7835"
+        }, 
+        {
+            "end": 1597554000000, 
+            "machine": 5, 
+            "start": 1597550400000, 
+            "status": 2, 
+            "title": "OT: 99-979"
+        }, 
+        {
+            "end": 1597600800000, 
+            "machine": 5, 
+            "start": 1597564800000, 
+            "status": 4, 
+            "title": "OT: 495-901"
+        }, 
+        {
+            "end": 1597622400000, 
+            "machine": 5, 
+            "start": 1597618800000, 
+            "status": 2, 
+            "title": "OT: 901-2389"
+        }, 
+        {
+            "end": 1597672800000, 
+            "machine": 5, 
+            "start": 1597644000000, 
+            "status": 4, 
+            "title": "OT: 998-8910"
+        }, 
+        {
+            "end": 1597716000000, 
+            "machine": 5, 
+            "start": 1597694400000, 
+            "status": 2, 
+            "title": "OT: 12-4454"
+        }, 
+        {
+            "end": 1597741200000, 
+            "machine": 5, 
+            "start": 1597726800000, 
+            "status": 1, 
+            "title": "OT: 611-4453"
+        }, 
+        {
+            "end": 1597784400000, 
+            "machine": 5, 
+            "start": 1597766400000, 
+            "status": 1, 
+            "title": "OT: 353-119"
+        }, 
+        {
+            "end": 1597831200000, 
+            "machine": 5, 
+            "start": 1597791600000, 
+            "status": 4, 
+            "title": "OT: 659-449"
+        }, 
+        {
+            "end": 1597863600000, 
+            "machine": 5, 
+            "start": 1597852800000, 
+            "status": 1, 
+            "title": "OT: 548-5180"
+        }, 
+        {
+            "end": 1597906800000, 
+            "machine": 5, 
+            "start": 1597878000000, 
+            "status": 2, 
+            "title": "OT: 415-7663"
+        }, 
+        {
+            "end": 1597960800000, 
+            "machine": 5, 
+            "start": 1597935600000, 
+            "status": 2, 
+            "title": "OT: 813-8051"
+        }, 
+        {
+            "end": 1598004000000, 
+            "machine": 5, 
+            "start": 1597971600000, 
+            "status": 2, 
+            "title": "OT: 107-9092"
+        }, 
+        {
+            "end": 1598043600000, 
+            "machine": 5, 
+            "start": 1598022000000, 
+            "status": 4, 
+            "title": "OT: 225-2510"
+        }, 
+        {
+            "end": 1598065200000, 
+            "machine": 5, 
+            "start": 1598050800000, 
+            "status": 4, 
+            "title": "OT: 40-9002"
+        }, 
+        {
+            "delay": 25, 
+            "end": 1598097600000, 
+            "machine": 5, 
+            "progress": 21, 
+            "start": 1598086800000, 
+            "status": 3, 
+            "title": "OT: 660-3178"
+        }, 
+        {
+            "delay": 18, 
+            "end": 1598137200000, 
+            "machine": 5, 
+            "progress": 34, 
+            "start": 1598119200000, 
+            "status": 3, 
+            "title": "OT: 702-1838"
+        }, 
+        {
+            "end": 1598158800000, 
+            "machine": 5, 
+            "start": 1598144400000, 
+            "status": 2, 
+            "title": "OT: 946-9017"
+        }, 
+        {
+            "end": 1598180400000, 
+            "machine": 5, 
+            "start": 1598173200000, 
+            "status": 2, 
+            "title": "OT: 286-6532"
+        }, 
+        {
+            "end": 1598220000000, 
+            "machine": 5, 
+            "start": 1598209200000, 
+            "status": 2, 
+            "title": "OT: 742-1347"
+        }, 
+        {
+            "end": 1598274000000, 
+            "machine": 5, 
+            "start": 1598238000000, 
+            "status": 1, 
+            "title": "OT: 138-8992"
+        }, 
+        {
+            "end": 1598306400000, 
+            "machine": 5, 
+            "start": 1598284800000, 
+            "status": 2, 
+            "title": "OT: 439-5305"
+        }, 
+        {
+            "end": 1598360400000, 
+            "machine": 5, 
+            "start": 1598324400000, 
+            "status": 4, 
+            "title": "OT: 325-2745"
+        }, 
+        {
+            "delay": 28, 
+            "end": 1598403600000, 
+            "machine": 5, 
+            "progress": 50, 
+            "start": 1598382000000, 
+            "status": 3, 
+            "title": "OT: 514-5249"
+        }, 
+        {
+            "end": 1598446800000, 
+            "machine": 5, 
+            "start": 1598432400000, 
+            "status": 4, 
+            "title": "OT: 684-2880"
+        }, 
+        {
+            "delay": 6, 
+            "end": 1598508000000, 
+            "machine": 5, 
+            "progress": 30, 
+            "start": 1598475600000, 
+            "status": 3, 
+            "title": "OT: 155-9079"
+        }, 
+        {
+            "end": 1598544000000, 
+            "machine": 5, 
+            "start": 1598511600000, 
+            "status": 4, 
+            "title": "OT: 510-7529"
+        }, 
+        {
+            "delay": 29, 
+            "end": 1598608800000, 
+            "machine": 5, 
+            "progress": 66, 
+            "start": 1598572800000, 
+            "status": 3, 
+            "title": "OT: 534-3200"
+        }, 
+        {
+            "end": 1598644800000, 
+            "machine": 5, 
+            "start": 1598634000000, 
+            "status": 1, 
+            "title": "OT: 720-734"
+        }, 
+        {
+            "end": 1598688000000, 
+            "machine": 5, 
+            "start": 1598659200000, 
+            "status": 4, 
+            "title": "OT: 198-7213"
+        }, 
+        {
+            "delay": 19, 
+            "end": 1598720400000, 
+            "machine": 5, 
+            "progress": 97, 
+            "start": 1598695200000, 
+            "status": 3, 
+            "title": "OT: 831-6888"
+        }, 
+        {
+            "end": 1598778000000, 
+            "machine": 5, 
+            "start": 1598742000000, 
+            "status": 4, 
+            "title": "OT: 150-9710"
+        }, 
+        {
+            "end": 1598821200000, 
+            "machine": 5, 
+            "start": 1598796000000, 
+            "status": 4, 
+            "title": "OT: 871-6803"
+        }, 
+        {
+            "delay": 28, 
+            "end": 1598850000000, 
+            "machine": 5, 
+            "progress": 73, 
+            "start": 1598824800000, 
+            "status": 3, 
+            "title": "OT: 200-8143"
+        }, 
+        {
+            "end": 1598911200000, 
+            "machine": 5, 
+            "start": 1598871600000, 
+            "status": 1, 
+            "title": "OT: 13-2242"
+        }, 
+        {
+            "end": 1598932800000, 
+            "machine": 5, 
+            "start": 1598922000000, 
+            "status": 1, 
+            "title": "OT: 922-2"
+        }, 
+        {
+            "delay": 25, 
+            "end": 1598983200000, 
+            "machine": 5, 
+            "progress": 64, 
+            "start": 1598954400000, 
+            "status": 3, 
+            "title": "OT: 788-8783"
+        }
+    ]
+}

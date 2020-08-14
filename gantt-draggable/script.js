@@ -1,6 +1,9 @@
 /**
  * Description: Draggable, scrollable and filterable Gantt Chart
  */
+let yTicksCnt = 3, // number of machines to show on graph. Please change it
+  zoomLevel = 1, // default zoom level: 1 day
+  textMinWid = 60; // hide text under this width
 
 const NOT_SCHEDULED = 'Not scheduled',
   SCHEDULED = 'Scheduled';
@@ -20,13 +23,31 @@ const mLabelWidth = 100,
   width = document.body.clientWidth - 17 - margin.right - margin.left,
   height =
     Math.min(630, document.body.clientHeight) - margin.top - margin.bottom,
-  yTicksCnt = 8,
-  notSchTaskWid = 120,
+  notSchTaskWid = 120;
+
+let timeOffset = 86400000, // 1 day duration in milliseconds
   tickHeight = height / yTicksCnt;
 
-let xScale, yScale, xAxis, xAxis1, yAxis, svg, gX, gX1, gY, gChart, gTasks,
-  gTasksNot, brushX, brushY, gBrushX, gBrushY, modal, modalContent, tip,
-  dragTask;
+let xScale,
+  yScale,
+  xAxis,
+  xAxis1,
+  yAxis,
+  svg,
+  gX,
+  gX1,
+  gY,
+  gChart,
+  gTasks,
+  gTasksNot,
+  gScrollX,
+  gScrollY,
+  modal,
+  modalContent,
+  tip,
+  dragTask,
+  gScrollNot,
+  totalNotHei;
 let tasks, machines, machinesById, machineIds, statuses, timeStart, timeEnd;
 
 const formatHour = d3.timeFormat('%I %p'),
@@ -40,31 +61,34 @@ const multiFormat = date =>
   (d3.timeDay(date) < date
     ? formatHour
     : d3.timeMonth(date) < date
-      ? d3.timeWeek(date) < date
-        ? formatDay
-        : formatWeek
-      : d3.timeYear(date) < date
-        ? formatMonth
-        : formatYear)(date);
+    ? d3.timeWeek(date) < date
+      ? formatDay
+      : formatWeek
+    : d3.timeYear(date) < date
+    ? formatMonth
+    : formatYear)(date);
 
 function visualize(data) {
   tasks = data['tasks'];
   machines = data['machines'].sort(d => d.name);
   machinesById = {};
-  machines.forEach((m) => {
+  machines.forEach(m => {
     machinesById[m.id] = m.name;
   });
   machineIds = machines.map(d => d.id);
   statuses = {};
   data['statuses'].forEach(s => (statuses[s.id] = s.name));
 
+  yTicksCnt = Math.min(yTicksCnt, machines.length);
+  tickHeight = height / yTicksCnt;
+
   addFilters(data['statuses']);
   addCanvas();
   addPopups();
-  addZoom();
   addAxes();
   addTasks();
-  addBrush();
+  addScrolls();
+  changeTimeDomain(zoomLevel);
   render();
 }
 
@@ -74,7 +98,41 @@ function render() {
   gY.call(yAxis);
   gY.selectAll('text')
     .text(d => machinesById[d])
-    .attr('transform', 'translate(' + [-mLabelWidth / 2 + 3, 0] + ')');
+    .attr('transform', 'translate(' + [-mLabelWidth / 2 + 3, 0] + ')')
+    .select(function () {
+      const text = d3.select(this);
+      const words = text.text().split(/\s+/).reverse();
+      let word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        dy = parseFloat(text.attr('dy')),
+        tspan = text
+          .text(null)
+          .append('tspan')
+          .attr('x', 0)
+          .attr('dy', dy + 'em'),
+        txtHei = 0;
+
+      while ((word = words.pop())) {
+        line.push(word);
+        tspan.text(line.join(' '));
+        if (tspan.node().getComputedTextLength() > mLabelWidth - 20) {
+          line.pop();
+          tspan.text(line.join(' '));
+          line = [word];
+          tspan = text
+            .append('tspan')
+            .attr('x', 0)
+            .attr('dy', ++lineNumber * lineHeight + dy + 'em')
+            .text(word);
+
+          txtHei += tspan.node().getBoundingClientRect().height;
+        }
+      }
+
+      text.selectAll('tspan').attr('y', -txtHei / 2);
+    });
 
   updateYTicks();
 
@@ -219,76 +277,32 @@ function addCanvas() {
     .append('path')
     .attr('d', `M0,0H${width}V${height}H0V0`);
 
+  svg
+    .append('defs')
+    .append('clipPath')
+    .attr('id', 'clipNS')
+    .append('path')
+    .attr(
+      'd',
+      `M0,${height + margin.top + margin.bottom + 10}H${width}V${
+        height + margin.top + margin.bottom + tickHeight * 2 + 20
+      }H0V${height + margin.top + margin.bottom + 10}`,
+    );
+
   gChart = svg
     .append('g')
     .attr('transform', 'translate(' + margin.left + ', ' + margin.top + ')');
 }
 
-function addZoom() {
-  timeEnd = d3.max(tasks, d => d.end);
-  timeStart = d3.min(tasks, d => d.start);
-
-  let xEnd = timeEnd;
-
-  if (timeStart + 86400000 < timeEnd) {
-    xEnd = timeStart + 86400000;
-  }
-
-  let endDate = new Date(timeStart);
-  endDate.setMonth(endDate.getMonth() + 1);
-  endDate = endDate.getTime() < timeEnd ? endDate.getTime() : timeEnd;
-
-  const zoom = d3
-    .zoom()
-    .scaleExtent([(xEnd - timeStart) / (endDate - timeStart), 1])
-    .on('zoom', function () {
-      console.log('zooming');
-      const zx = d3.event.transform.rescaleX(xScale);
-      let d0 = zx.domain()[0].getTime();
-      let d1 = zx.domain()[1].getTime();
-      const offset = d1 - d0;
-
-      if (offset > timeEnd - timeStart) {
-        zx.domain([timeStart, timeEnd]);
-        return;
-      } else if (d0 < timeStart) {
-        d0 = timeStart;
-        d1 = d0 + offset;
-      } else if (d1 > timeEnd) {
-        d1 = timeEnd;
-        d0 = d1 - offset;
-      }
-
-      zx.domain([d0, d1]);
-
-      xAxis.scale(zx);
-      xAxis1.scale(zx);
-
-      const b0 = (d0 - timeStart) / (timeEnd - timeStart) * width;
-      const b1 = (d1 - timeStart) / (timeEnd - timeStart) * width;
-      brushX.move(gBrushX, [b0, b1]);
-
-      render();
-    });
-
-  gChart
-    .append('rect')
-    .attr('x', 0)
-    .attr('y', 0)
-    .attr('width', width)
-    .attr('height', height)
-    .attr('fill', '#ffffff')
-    .call(zoom);
-}
-
 function addAxes() {
   timeEnd = d3.max(tasks, d => d.end);
   timeStart = d3.min(tasks, d => d.start);
+  timeOffset = zoomLevel * 86400000;
 
   let xEnd = timeEnd;
 
-  if (timeStart + 86400000 < timeEnd) {
-    xEnd = timeStart + 86400000;
+  if (timeStart + timeOffset < timeEnd) {
+    xEnd = timeStart + timeOffset;
   }
 
   xScale = d3.scaleTime().domain([timeStart, xEnd]).range([0, width]);
@@ -319,57 +333,138 @@ function addAxes() {
     .attr('transform', 'translate(' + [width, 0] + ')');
 }
 
-function addBrush() {
-  brushX = d3
-    .brushX()
-    .extent([
-      [0, height + margin.top + 5],
-      [width, height + margin.top + 25],
-    ])
-    .on('brush end', () => {
-      const [s0, s1] = d3.event.selection;
-      const d0 = new Date(s0 / width * (timeEnd - timeStart) + timeStart);
-      const d1 = new Date(s1 / width * (timeEnd - timeStart) + timeStart);
+function addScrolls() {
+  const gScrolls = gChart.append('g').classed('scrolls', true);
+
+  gScrollX = gScrolls.append('g').attr('class', 'scroll x');
+  gScrollX
+    .append('rect')
+    .classed('overlay', true)
+    .attr('pointer-events', 'all')
+    .attr('width', width)
+    .attr('height', 20)
+    .attr('x', 0)
+    .attr('y', height + margin.top + 5);
+
+  let dragXStart = null;
+
+  const dragX = d3
+    .drag()
+    .on('start', function () {
+      dragXStart = d3.event.x;
+    })
+    .on('drag', function () {
+      if (dragXStart === null) return;
+
+      const dx = d3.event.x;
+
+      let s0 = parseFloat(gScrollX.select('.selection').attr('x'));
+      const w = parseFloat(gScrollX.select('.selection').attr('width'));
+
+      s0 += dx - dragXStart;
+      let s1 = s0 + w;
+
+      if (s0 < 0) {
+        s0 = 0;
+        s1 = w;
+      }
+
+      if (s1 > width) {
+        s0 = width - w;
+        s1 = width;
+      }
+
+      gScrollX.select('.selection').attr('x', s0);
+
+      const d0 = new Date((s0 / width) * (timeEnd - timeStart) + timeStart);
+      const d1 = new Date((s1 / width) * (timeEnd - timeStart) + timeStart);
 
       xAxis.scale().domain([d0, d1]);
       xAxis1.scale().domain([d0, d1]);
 
+      dragXStart = dx;
+
       render();
+    })
+    .on('end', function () {
+      dragXStart = null;
     });
 
-  const gBrushes = gChart.append('g');
+  gScrollX
+    .append('rect')
+    .classed('selection', true)
+    .attr('pointer-events', 'all')
+    .attr('cursor', 'move')
+    .attr('width', (timeOffset / (timeEnd - timeStart)) * width)
+    .attr('height', 20)
+    .attr('x', 0)
+    .attr('y', height + margin.top + 5)
+    .call(dragX);
 
-  gBrushX = gBrushes
-    .append('g')
-    .call(brushX)
-    .attr('class', 'brush')
-    .on('dblclick.brush', null);
+  gScrollY = gScrolls.append('g').attr('class', 'scroll y');
 
-  brushX.move(gBrushX, [0, 86400000 / (timeEnd - timeStart) * width]);
+  gScrollY
+    .append('rect')
+    .classed('overlay', true)
+    .attr('pointer-events', 'all')
+    .attr('width', 20)
+    .attr('height', height)
+    .attr('x', width + 10)
+    .attr('y', 0);
 
-  brushY = d3
-    .brushY()
-    .extent([
-      [width + 10, 0],
-      [width + 30, height],
-    ])
-    .on('brush end', () => {
-      const [s0, s1] = d3.event.selection;
-      const d0 = Math.floor(s0 / height * machineIds.length);
-      const d1 = Math.floor(s1 / height * machineIds.length);
+  let dragYStart = null;
+
+  const dragY = d3
+    .drag()
+    .on('start', function () {
+      dragYStart = d3.event.y;
+    })
+    .on('drag', function () {
+      if (dragYStart === null) return;
+
+      const dy = d3.event.y;
+
+      let s0 = parseFloat(gScrollY.select('.selection').attr('y')),
+        h = parseFloat(gScrollY.select('.selection').attr('height'));
+
+      s0 += dy - dragYStart;
+      let s1 = s0 + h;
+
+      if (s0 < 0) {
+        s0 = 0;
+        s1 = h;
+      }
+
+      if (s1 > height) {
+        s0 = height - h;
+        s1 = height;
+      }
+
+      gScrollY.select('.selection').attr('y', s0);
+
+      const d0 = Math.round((s0 / height) * machineIds.length);
+      const d1 = Math.round((s1 / height) * machineIds.length);
 
       yAxis.scale().domain(machineIds.slice(d0, d1));
 
+      dragYStart = dy;
+
       render();
+    })
+    .on('end', function () {
+      dragYStart = null;
     });
 
-  gBrushY = gBrushes
-    .append('g')
-    .call(brushY)
-    .attr('class', 'brush')
-    .on('dblclick.brush', null);
-
-  brushY.move(gBrushY, [0, yTicksCnt / machineIds.length * height]);
+  gScrollY
+    .append('rect')
+    .classed('selection', true)
+    .attr('pointer-events', 'all')
+    .attr('cursor', 'move')
+    .attr('width', 20)
+    .attr('height', (yTicksCnt / machineIds.length) * height)
+    .attr('x', width + 10)
+    .attr('y', 0)
+    .call(dragY);
 }
 
 function addTasks() {
@@ -383,7 +478,7 @@ function addTasks() {
   dragTask = d3
     .drag()
     .on('start', function (d) {
-      beforeEvent = {x: d3.event.x, y: d3.event.y};
+      beforeEvent = { x: d3.event.x, y: d3.event.y };
       dragStart = xAxis.scale().invert(d3.event.x).getTime();
 
       if (statuses[d.status] === NOT_SCHEDULED) {
@@ -403,8 +498,21 @@ function addTasks() {
       beforeState = statuses[d.status];
     })
     .on('drag', function (d) {
-      const dragX = xAxis.scale().invert(d3.event.x).getTime(),
-        dragY = d3.event.y;
+      let dragX = xAxis.scale().invert(d3.event.x).getTime(),
+        dragY = d3.event.y,
+        transY = 0;
+
+      if (statuses[d.status] === NOT_SCHEDULED) {
+        const trans = d3.select('.tasksList').attr('transform');
+
+        if (trans) {
+          transY = parseFloat(
+            trans.replace('translate(', '').replace(')', '').split(',')[1],
+          );
+        }
+
+        dragY += transY;
+      }
 
       const duration = d.end - d.start;
       d.start += dragX - dragStart;
@@ -413,8 +521,8 @@ function addTasks() {
 
       d.machine =
         Math.floor(
-          dragY / (yScale.range()[1] - yScale.range()[0]) *
-          yScale.domain().length,
+          (dragY / (yScale.range()[1] - yScale.range()[0])) *
+            yScale.domain().length,
         ) + yScale.domain()[0];
 
       let yVal = yScale(d.machine);
@@ -432,9 +540,7 @@ function addTasks() {
           }
 
           if ('delay' in d) {
-            d3.select(this)
-              .append('path')
-              .attr('class', 'delay');
+            d3.select(this).append('path').attr('class', 'delay');
           }
 
           d3.select(this).append(() =>
@@ -450,8 +556,9 @@ function addTasks() {
           }
         }
       } else {
-        d3.select(this).attr('transform', () =>
-          'translate(' + [xAxis.scale()(d.start), dragY] + ')',
+        d3.select(this).attr(
+          'transform',
+          () => 'translate(' + [xAxis.scale()(d.start), dragY] + ')',
         );
 
         d3.select(this).select('path.delay').remove();
@@ -475,7 +582,7 @@ function addTasks() {
       if (statuses[d.status] === SCHEDULED && beforeState === NOT_SCHEDULED) {
         gTasks.append(() => d3.select(this).node());
       } else if (statuses[d.status] === NOT_SCHEDULED) {
-        gTasksNot.append(() => d3.select(this).node());
+        gTasksNot.select('.tasksList').append(() => d3.select(this).node());
       }
 
       alignNotScheduledTasks();
@@ -503,10 +610,74 @@ function addTasks() {
     .attr('y', heiN)
     .attr('dy', '.5em');
 
-  gTasksNot
-    .append('path').classed('tasks-bg', true);
+  gTasksNot.append('path').classed('tasks-bg', true);
+
+  gScrollNot = gTasksNot.append('g').attr('class', 'scroll not');
+  gScrollNot
+    .append('rect')
+    .classed('overlay', true)
+    .attr('pointer-events', 'all')
+    .attr('width', 20)
+    .attr('height', tickHeight * 2 + 10)
+    .attr('x', width + 10)
+    .attr('y', heiN + 10);
+
+  let dStart = null;
+
+  const drag = d3
+    .drag()
+    .on('start', function () {
+      dStart = d3.event.y;
+    })
+    .on('drag', function () {
+      if (dStart === null) return;
+
+      const dy = d3.event.y;
+
+      let y0 = parseFloat(d3.select(this).attr('y')),
+        h = parseFloat(d3.select(this).attr('height'));
+
+      y0 += dy - dStart;
+
+      if (y0 + h > tickHeight * 2 + heiN + 20) {
+        y0 = heiN + 20 + tickHeight * 2 - h;
+      } else if (y0 < heiN + 10) {
+        y0 = heiN + 10;
+      }
+
+      d3.select(this).attr('y', y0);
+
+      const ty =
+        ((y0 - heiN - 10) / (tickHeight * 2 + 10 - h)) *
+        (totalNotHei - tickHeight * 2 - 10);
+
+      gTasksNot
+        .select('.tasksList')
+        .attr('transform', 'translate(' + [0, -ty] + ')');
+
+      dStart = dy;
+    })
+    .on('end', function () {
+      dStart = null;
+    });
+
+  gScrollNot
+    .append('rect')
+    .classed('selection', true)
+    .attr('pointer-events', 'all')
+    .attr('cursor', 'move')
+    .attr('width', 20)
+    .attr('height', 60)
+    .attr('x', width + 10)
+    .attr('y', heiN + 10)
+    .call(drag);
 
   gTasksNot
+    .append('g')
+    .classed('tasksWrapper', true)
+    .attr('clip-path', 'url(#clipNS)')
+    .append('g')
+    .classed('tasksList', true)
     .selectAll('.task')
     .data(tasks.filter(d => statuses[d.status] === NOT_SCHEDULED))
     .enter()
@@ -530,19 +701,13 @@ const addTask = (d, that) => {
 
   if (statuses[d.status] !== NOT_SCHEDULED) {
     if ('delay' in d) {
-      d3.select(that)
-        .append('path')
-        .attr('class', 'delay');
+      d3.select(that).append('path').attr('class', 'delay');
     }
 
     if ('progress' in d) {
-      d3.select(that)
-        .append('path')
-        .attr('class', 'progress-bg');
+      d3.select(that).append('path').attr('class', 'progress-bg');
 
-      d3.select(that)
-        .append('path')
-        .attr('class', 'progress');
+      d3.select(that).append('path').attr('class', 'progress');
 
       d3.select(that)
         .append('text')
@@ -590,9 +755,7 @@ function updateTask(d, that) {
     )
     .attr('d', `M0 0H${wid}V${hei}H0V0`);
 
-  d3.select(that)
-    .select('path.overlay')
-    .attr('d', `M0 0H${wid}V${hei}H0V0`);
+  d3.select(that).select('path.overlay').attr('d', `M0 0H${wid}V${hei}H0V0`);
 
   if (statuses[d.status] !== NOT_SCHEDULED) {
     if ('delay' in d) {
@@ -625,9 +788,9 @@ function updateTask(d, that) {
           'd',
           `M${delay} ${hei - 15}Q${delay} ${hei - 20},${delay + 5} ${
             hei - 20
-          }H${progress + delay}V${hei}H${
-            delay + 5
-          }Q${delay} ${hei}, ${delay} ${hei - 5}`,
+          }H${progress + delay}V${hei}H${delay + 5}Q${delay} ${hei}, ${delay} ${
+            hei - 5
+          }`,
         );
 
       d3.select(that)
@@ -643,7 +806,7 @@ function updateTask(d, that) {
 
   d3.select(that)
     .select('text.title')
-    .classed('small', wid < 50)
+    .classed('small', wid < textMinWid)
     .attr('x', wid / 2 + delay)
     .attr('y', hei / 2);
 }
@@ -651,10 +814,11 @@ function updateTask(d, that) {
 function alignNotScheduledTasks() {
   const heiN = height + margin.top + margin.bottom;
 
-  gTasksNot.select('path.tasks-bg')
+  gTasksNot
+    .select('path.tasks-bg')
     .attr(
       'd',
-      `M0.5,${heiN + 10}H${width}V${heiN + tickHeight + 10}H0.5V${
+      `M0.5,${heiN + 10}H${width}V${heiN + tickHeight * 2 + 20}H0.5V${
         heiN + 10
       }`,
     );
@@ -662,28 +826,21 @@ function alignNotScheduledTasks() {
   let xPos = 10,
     yPos = heiN + 20;
 
+  totalNotHei = 10 + tickHeight;
+
+  svg.attr('height', yPos + tickHeight * 2 + 40);
+
   gTasksNot
     .selectAll('.task')
     .attr('transform', () => {
       const translate = 'translate(' + [xPos, yPos] + ')';
       xPos += notSchTaskWid + 10;
 
-      svg.attr('height', yPos + tickHeight + 120);
-
       if (xPos + notSchTaskWid > width - 20) {
         xPos = 10;
         yPos += tickHeight;
-
-        gTasksNot
-          .select('path')
-          .attr(
-            'd',
-            `M0.5,${heiN + 10}H${width}V${yPos + tickHeight}H0.5V${
-              heiN + 10
-            }`,
-          );
+        totalNotHei += tickHeight;
       }
-
       return translate;
     })
     .select(function (d) {
@@ -692,13 +849,13 @@ function alignNotScheduledTasks() {
 }
 
 function setProgressSize(wid, hei, delay) {
-  return `M${delay} ${hei - 15}Q${delay} ${hei - 20},${delay + 5} ${
-    hei - 20
-  }H${wid + delay - 5}Q${wid + delay} ${hei - 20},${wid + delay} ${
-    hei - 15
-  }V${hei - 5}Q${wid + delay} ${hei}, ${wid + delay - 5} ${hei}H${
-    delay + 5
-  }Q${delay} ${hei}, ${delay} ${hei - 5}`;
+  return `M${delay} ${hei - 15}Q${delay} ${hei - 20},${delay + 5} ${hei - 20}H${
+    wid + delay - 5
+  }Q${wid + delay} ${hei - 20},${wid + delay} ${hei - 15}V${hei - 5}Q${
+    wid + delay
+  } ${hei}, ${wid + delay - 5} ${hei}H${delay + 5}Q${delay} ${hei}, ${delay} ${
+    hei - 5
+  }`;
 }
 
 function addPopups() {
@@ -726,22 +883,51 @@ function addPopups() {
     .on('click', () => {
       modal.style('display', 'none');
     });
-  modalContent = modalWrapper
-    .append('div')
-    .classed('modal-content', true);
+  modalContent = modalWrapper.append('div').classed('modal-content', true);
 }
 
 function showModal(d) {
   modal.style('display', 'block');
   modalContent.html(
     d.title +
-    '<br/>Status: ' +
-    statuses[d.status] +
-    '<br/>Date: ' +
-    getFormattedDate(d.start),
+      '<br/>Status: ' +
+      statuses[d.status] +
+      '<br/>Date: ' +
+      getFormattedDate(d.start),
   );
 }
 
-d3.json('./assets/data.json').then(data => {
+function changeTimeDomain(dur) {
+  timeOffset = 86400000 * dur;
+
+  let d0 = xScale.domain()[0].getTime(),
+    d1 = d0 + timeOffset;
+
+  if (timeOffset > timeEnd - timeStart) {
+    d0 = timeStart;
+    d1 = timeEnd;
+  } else if (d0 < timeStart) {
+    d0 = timeStart;
+    d1 = d0 + timeOffset;
+  } else if (d1 > timeEnd) {
+    d1 = timeEnd;
+    d0 = d1 - timeOffset;
+  }
+
+  xScale.domain([d0, d1]);
+
+  xAxis.scale(xScale);
+  xAxis1.scale(xScale);
+
+  const b0 = ((d0 - timeStart) / (timeEnd - timeStart)) * width;
+  const b1 = ((d1 - timeStart) / (timeEnd - timeStart)) * width;
+
+  gScrollX.select('.selection').attr('x', b0);
+  gScrollX.select('.selection').attr('width', b1 - b0);
+
+  render();
+}
+
+d3.json('./assets/datatest/data.5m.json').then(data => {
   visualize(data);
 });
